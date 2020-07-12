@@ -8,4 +8,5 @@ r = "run"
 rr = "run --release"
 br = "build --release"
 
-[target.rele
+[target.release]
+rustflags=["target-cpu=native"]

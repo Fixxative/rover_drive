@@ -12,4 +12,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "async-strea
+name = "async-stream"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crate

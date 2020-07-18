@@ -24,4 +24,5 @@ dependencies = [
 [[package]]
 name = "async-stream-impl"
 version = "0.3.3"
-source = "registry+https://githu
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "10f203db73a71dfa2fb6dd2

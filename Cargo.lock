@@ -22,4 +22,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "async-strea
+name = "async-stream-impl"
+version = "0.3.3"
+source = "registry+https://githu

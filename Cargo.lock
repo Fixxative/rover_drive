@@ -62,4 +62,5 @@ dependencies = [
 [[package]]
 name = "bumpalo"
 version = "3.11.0"
-source = "registry+https://github.com/rust-lang/crates
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c1ad822118d20d2c234f427000d5acc36eab

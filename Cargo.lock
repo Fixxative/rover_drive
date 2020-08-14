@@ -68,4 +68,5 @@ checksum = "c1ad822118d20d2c234f427000d5acc36eabe1e29a348c89b63dd60b13f28e5d"
 [[package]]
 name = "byteorder"
 version = "1.4.3"
-source = "registry+ht
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "14c18

@@ -84,4 +84,5 @@ dependencies = [
 [[package]]
 name = "bytes"
 version = "1.2.1"
-source = "registry+https://github.com/rust-lang/cr
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ec8a7b6a70fde80372154c65702f00a0f56f3e1c36ab

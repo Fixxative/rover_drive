@@ -133,4 +133,7 @@ dependencies = [
  "termcolor",
 ]
 
-[[pac
+[[package]]
+name = "clap_lex"
+version = "0.3.0"
+source = "registry+ht

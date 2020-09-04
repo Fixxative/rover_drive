@@ -136,4 +136,5 @@ dependencies = [
 [[package]]
 name = "clap_lex"
 version = "0.3.0"
-source = "registry+ht
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d4198f73e42b4936

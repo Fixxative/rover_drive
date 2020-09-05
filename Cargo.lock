@@ -152,4 +152,8 @@ dependencies = [
  "dec",
  "futures 0.3.24",
  "futures-util",
- "http_re
+ "http_req",
+ "inlinable_string",
+ "serde",
+ "serde_json",
+ "termion 2

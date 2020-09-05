@@ -143,4 +143,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "coinl
+name = "coinlive"
+version = "0.2.3"
+dependencies = [
+ "async-stream",
+ "chrono",

@@ -148,3 +148,8 @@ version = "0.2.3"
 dependencies = [
  "async-stream",
  "chrono",
+ "clap",
+ "dec",
+ "futures 0.3.24",
+ "futures-util",
+ "http_re

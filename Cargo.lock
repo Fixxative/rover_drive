@@ -160,4 +160,11 @@ dependencies = [
  "tokio",
  "tokio-stdin-stdout",
  "tokio-stream",
- "tokio-t
+ "tokio-tungstenite",
+ "tui",
+ "tungstenite",
+ "url",
+ "version",
+]
+
+[[

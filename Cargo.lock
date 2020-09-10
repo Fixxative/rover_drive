@@ -167,4 +167,7 @@ dependencies = [
  "version",
 ]
 
-[[
+[[package]]
+name = "core-foundation"
+version = "0.9.3"
+source =

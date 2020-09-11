@@ -170,4 +170,4 @@ dependencies = [
 [[package]]
 name = "core-foundation"
 version = "0.9.3"
-source =
+source = "registry+https://github.com/rust-lang/crates.io-index"

@@ -180,4 +180,5 @@ dependencies = [
 [[package]]
 name = "core-foundation-sys"
 version = "0.8.3"
-source = "registry+https://github.com/rus
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5827cebf4670468b8772dd19

@@ -178,4 +178,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "core-f
+name = "core-foundation-sys"
+version = "0.8.3"
+source = "registry+https://github.com/rus

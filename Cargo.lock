@@ -192,4 +192,7 @@ dependencies = [
  "libc",
 ]
 
-[[package]
+[[package]]
+name = "crypto-common"
+version = "0.1.6"
+source = "registry+ht

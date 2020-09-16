@@ -195,4 +195,5 @@ dependencies = [
 [[package]]
 name = "crypto-common"
 version = "0.1.6"
-source = "registry+ht
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1bfb12502f3

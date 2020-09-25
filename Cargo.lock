@@ -205,4 +205,5 @@ dependencies = [
 [[package]]
 name = "dec"
 version = "0.4.8"
-source = "registry+https://g
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cbdeb628adfc427c3f9265

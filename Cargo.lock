@@ -217,4 +217,4 @@ dependencies = [
 name = "decnumber-sys"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "76a99b
+checksum = "76a99b958f19724bc0a2202086d135c2e7ed098e95cdae778546e965648fa

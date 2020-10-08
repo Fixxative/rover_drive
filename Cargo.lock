@@ -216,4 +216,5 @@ dependencies = [
 [[package]]
 name = "decnumber-sys"
 version = "0.1.5"
-source = "registr
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "76a99b

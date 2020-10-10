@@ -223,4 +223,7 @@ dependencies = [
  "libc",
 ]
 
-[[packag
+[[package]]
+name = "digest"
+version = "0.10.5"
+source = "regist

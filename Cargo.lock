@@ -226,4 +226,5 @@ dependencies = [
 [[package]]
 name = "digest"
 version = "0.10.5"
-source = "regist
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "adfbc57365a

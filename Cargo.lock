@@ -236,4 +236,5 @@ dependencies = [
 [[package]]
 name = "errno"
 version = "0.2.8"
-source = "regis
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum

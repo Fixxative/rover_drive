@@ -257,4 +257,5 @@ dependencies = [
 [[package]]
 name = "fastrand"
 version = "1.8.0"
-source = "registry+htt
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = 

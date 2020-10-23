@@ -265,4 +265,5 @@ dependencies = [
 
 [[package]]
 name = "fnv"
-versi
+version = "1.0.7"
+source = "registry+https://github.com/rust

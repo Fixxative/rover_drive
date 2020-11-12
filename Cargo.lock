@@ -296,4 +296,5 @@ dependencies = [
 [[package]]
 name = "futures"
 version = "0.1.31"
-source = "registry+http
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3a471a38ef8ed83cd6e40a

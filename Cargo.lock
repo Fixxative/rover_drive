@@ -320,4 +320,9 @@ version = "0.3.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "30bdd20c28fadd505d0fd6712cdfcb0d4b5648baf45faef7f852afb2399bb050"
 dependencies = [
- "futures-core
+ "futures-core",
+ "futures-sink",
+]
+
+[[package]]
+name = "futures

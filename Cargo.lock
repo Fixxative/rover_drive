@@ -325,4 +325,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "futures
+name = "futures-core"
+version = "0.3.24"
+source = "registry+ht

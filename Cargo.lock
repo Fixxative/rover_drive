@@ -333,4 +333,5 @@ checksum = "4e5aa3de05362c3fb88de6531e6296e85cde7739cccad4b9dfeeb7f6ebce56bf"
 [[package]]
 name = "futures-executor"
 version = "0.3.24"
-source = "registry+https://github.com/rust-lang/crates.io-index
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9ff63c23854bee61b6e9cd331d523909f238

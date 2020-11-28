@@ -342,4 +342,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "futu
+name = "futures-io"
+version = "0.3.24"
+source = "registry+https:/

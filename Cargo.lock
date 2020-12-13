@@ -380,4 +380,7 @@ dependencies = [
  "futures-core",
  "futures-io",
  "futures-macro",
- "f
+ "futures-sink",
+ "futures-task",
+ "memchr",
+ "pin-p

@@ -391,4 +391,5 @@ dependencies = [
 [[package]]
 name = "generic-array"
 version = "0.14.6"
-source = "registry+https://g
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bff49e947297f33124

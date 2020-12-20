@@ -401,4 +401,5 @@ dependencies = [
 [[package]]
 name = "getrandom"
 version = "0.2.7"
-source = "registry+https://github.com/
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4eb1a864a501629691

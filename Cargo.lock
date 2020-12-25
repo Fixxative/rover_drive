@@ -412,4 +412,5 @@ dependencies = [
 [[package]]
 name = "hermit-abi"
 version = "0.1.19"
-source = "r
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum

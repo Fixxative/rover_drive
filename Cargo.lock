@@ -409,4 +409,7 @@ dependencies = [
  "wasi 0.11.0+wasi-snapshot-preview1",
 ]
 
-[[
+[[package]]
+name = "hermit-abi"
+version = "0.1.19"
+source = "r

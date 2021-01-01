@@ -431,4 +431,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75f43d41e26995c17e71ee126451dd3941010b0514a81a9d11f3b341debc2399"
 dependencies = [
  "bytes 1.2.1",
- "fnv"
+ "fnv",
+ "itoa",
+]
+
+[[package]]
+name = "http_req"
+version = "0.9.0"

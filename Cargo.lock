@@ -438,3 +438,4 @@ dependencies = [
 [[package]]
 name = "http_req"
 version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crat

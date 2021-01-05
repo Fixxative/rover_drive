@@ -444,4 +444,9 @@ dependencies = [
  "rustls",
  "unicase",
  "webpki",
- "webpki-ro
+ "webpki-roots",
+]
+
+[[package]]
+name = "httparse"
+version = "1.8

@@ -468,4 +468,5 @@ dependencies = [
 
 [[package]]
 name = "idna"
-vers
+version = "0.3.0"
+source = "registry+https://github.com/rust-l

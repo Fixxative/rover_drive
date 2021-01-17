@@ -482,4 +482,7 @@ version = "0.1.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c8fae54786f62fb2918dcfae3d568594e50eb9b5c25bf04371af6fe7516452fb"
 
-[[pac
+[[package]]
+name = "instant"
+version = "0.1.12"
+source = "registry+http

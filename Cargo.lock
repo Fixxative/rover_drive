@@ -494,4 +494,5 @@ dependencies = [
 [[package]]
 name = "io-lifetimes"
 version = "1.0.5"
-source = "registry+https://git
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1abeb7a0dd

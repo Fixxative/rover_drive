@@ -524,4 +524,5 @@ dependencies = [
 
 [[package]]
 name = "itoa"
-ver
+version = "1.0.3"
+source = "registry+https://github.com/rust-l

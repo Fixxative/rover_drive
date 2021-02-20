@@ -525,4 +525,5 @@ dependencies = [
 [[package]]
 name = "itoa"
 version = "1.0.3"
-source = "registry+https://github.com/rust-l
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6c8af84674fe1f223a982c933a0ee1086ac4d405

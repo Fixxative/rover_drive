@@ -539,4 +539,5 @@ dependencies = [
 
 [[package]]
 name = "lazy_static"
-version
+version = "1.4.0"
+source = "registry+https://github.com/r

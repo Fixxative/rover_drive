@@ -577,4 +577,4 @@ dependencies = [
 [[package]]
 name = "memchr"
 version = "2.5.0"
-s
+source = "registry+https://github.com/rust-lang/crates.io-index

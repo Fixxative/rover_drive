@@ -568,4 +568,5 @@ dependencies = [
 [[package]]
 name = "log"
 version = "0.4.17"
-source = "registry+
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "abb

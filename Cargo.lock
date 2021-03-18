@@ -612,4 +612,5 @@ dependencies = [
 
 [[package]]
 name = "num-integer"
-vers
+version = "0.1.45"
+source = "registry+https://github.com/rust-l

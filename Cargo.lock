@@ -606,4 +606,10 @@ dependencies = [
  "openssl-sys",
  "schannel",
  "security-framework",
- "security-framework-
+ "security-framework-sys",
+ "tempfile",
+]
+
+[[package]]
+name = "num-integer"
+vers

@@ -613,4 +613,5 @@ dependencies = [
 [[package]]
 name = "num-integer"
 version = "0.1.45"
-source = "registry+https://github.com/rust-l
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "225d3389fb3509a24c93f5c29eb

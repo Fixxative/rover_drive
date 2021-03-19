@@ -632,3 +632,4 @@ dependencies = [
 [[package]]
 name = "num_cpus"
 version = "1.13.1"
+source = "registry+https://github.com/rust-lang/cr

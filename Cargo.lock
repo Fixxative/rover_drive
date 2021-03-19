@@ -632,4 +632,5 @@ dependencies = [
 [[package]]
 name = "num_cpus"
 version = "1.13.1"
-source = "registry+https://github.com/rust-lang/cr
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "19e64526ebdee182341572e50e9a

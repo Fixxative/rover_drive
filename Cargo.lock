@@ -642,4 +642,5 @@ dependencies = [
 [[package]]
 name = "numtoa"
 version = "0.1.0"
-source = "registry+https://github.com/rust-l
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b8f8bdf33df195859076e5

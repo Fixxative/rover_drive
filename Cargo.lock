@@ -669,4 +669,5 @@ dependencies = [
 [[package]]
 name = "openssl-macros"
 version = "0.1.0"
-source = 
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum =

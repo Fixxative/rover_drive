@@ -661,4 +661,9 @@ dependencies = [
  "cfg-if",
  "foreign-types",
  "libc",
- "on
+ "once_cell",
+ "openssl-macros",
+ "openssl-sys",
+]
+
+[[package]

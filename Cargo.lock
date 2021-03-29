@@ -699,4 +699,5 @@ dependencies = [
 [[package]]
 name = "os_str_bytes"
 version = "6.3.0"
-source = "registry+https://githu
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9ff7415e9ae3fff1

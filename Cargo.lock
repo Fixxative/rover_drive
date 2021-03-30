@@ -714,4 +714,5 @@ dependencies = [
 
 [[package]]
 name = "parking_lot_core"
-version =
+version = "0.9.3"
+source = "registry+https://github.com/rust-lang/crates

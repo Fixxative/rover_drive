@@ -727,4 +727,5 @@ dependencies = [
 
 [[package]]
 name = "percent-encoding"
-version =
+version = "2.2.0"
+source = "registry+https://github.com/rust-l

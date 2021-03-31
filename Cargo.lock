@@ -719,3 +719,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "09a279cbf25cb0757810394fbc1e359949b59e348145c643a939a525692e6929"
 dependencies = [
  "cfg-if",
+ "libc",
+ "redox_syscall",
+ "smallvec",
+ "windows-sys 

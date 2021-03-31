@@ -728,4 +728,5 @@ dependencies = [
 [[package]]
 name = "percent-encoding"
 version = "2.2.0"
-source = "registry+https://github.com/rust-l
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "478c572c3d73181ff3c2539045f6eb

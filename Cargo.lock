@@ -775,4 +775,5 @@ dependencies = [
 
 [[package]]
 name = "rand"
-version =
+version = "0.8.5"
+source = "registry+https://github.com/rust-lang/crates.i

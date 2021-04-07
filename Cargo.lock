@@ -767,4 +767,5 @@ dependencies = [
 [[package]]
 name = "quote"
 version = "1.0.21"
-source = "registry+https://gi
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbe448f377a7d6961

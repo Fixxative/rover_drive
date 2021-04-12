@@ -796,4 +796,5 @@ dependencies = [
 
 [[package]]
 name = "rand_core"
-version 
+version = "0.6.4"
+source = "registry+https://github.com/rust-lang/crates.io-in

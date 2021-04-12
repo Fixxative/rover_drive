@@ -806,4 +806,5 @@ dependencies = [
 [[package]]
 name = "redox_syscall"
 version = "0.2.16"
-source = "registry
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fb5a58c18

@@ -832,4 +832,5 @@ dependencies = [
 
 [[package]]
 name = "ring"
-ver
+version = "0.16.20"
+source = "registry+https://github.com/ru

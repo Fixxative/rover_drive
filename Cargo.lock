@@ -821,4 +821,7 @@ dependencies = [
  "redox_syscall",
 ]
 
-[[pack
+[[package]]
+name = "remove_dir_all"
+version = "0.5.3"
+source = "registry+ht

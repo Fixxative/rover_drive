@@ -833,4 +833,5 @@ dependencies = [
 [[package]]
 name = "ring"
 version = "0.16.20"
-source = "registry+https://github.com/ru
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3053cf52e236a

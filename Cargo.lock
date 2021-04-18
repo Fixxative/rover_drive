@@ -824,4 +824,5 @@ dependencies = [
 [[package]]
 name = "remove_dir_all"
 version = "0.5.3"
-source = "registry+ht
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3acd12566

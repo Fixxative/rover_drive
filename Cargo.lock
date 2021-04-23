@@ -862,4 +862,5 @@ dependencies = [
 [[package]]
 name = "rustls"
 version = "0.19.1"
-source = "registry+https://
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = 

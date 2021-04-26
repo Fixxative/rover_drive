@@ -901,3 +901,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b362b83898e0e69f38515b82ee15aa80636befe47c3b6d3d89a911e78fc228ce"
 dependencies = [
  "ring",
+ "untrusted",
+]
+
+[[package]]
+name = "security-framework"
+version = "2

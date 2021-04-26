@@ -907,4 +907,5 @@ dependencies = [
 [[package]]
 name = "security-framework"
 version = "2.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-i
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2bc1bb97804af6631813c55739f771071e0f2ed33ee20b

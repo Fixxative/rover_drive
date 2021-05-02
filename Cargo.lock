@@ -916,3 +916,7 @@ dependencies = [
  "libc",
  "security-framework-sys",
 ]
+
+[[package]]
+name = "security-framework-sys"
+version = "2.6.1"

@@ -920,3 +920,4 @@ dependencies = [
 [[package]]
 name = "security-framework-sys"
 version = "2.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-in

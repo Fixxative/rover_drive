@@ -924,4 +924,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0160a13a177a45bfb43ce71c01580998474f556ad854dcbca936dd2841a5c556"
 dependencies = [
  "core-foundation-sys",
- "libc
+ "libc",
+]
+
+[[package]]
+name = "serde"
+version = "1.0.145"
+s

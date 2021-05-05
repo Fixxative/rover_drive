@@ -969,4 +969,7 @@ dependencies = [
  "digest",
 ]
 
-[[p
+[[package]]
+name = "signal-hook-registry"
+version = "1.4.0"
+s

@@ -961,4 +961,5 @@ dependencies = [
 [[package]]
 name = "sha1"
 version = "0.10.5"
-source = "regis
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f04293

@@ -972,4 +972,4 @@ dependencies = [
 [[package]]
 name = "signal-hook-registry"
 version = "1.4.0"
-s
+source = "registry+https://github.com/rust-lang/crates.io-i

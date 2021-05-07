@@ -978,4 +978,7 @@ dependencies = [
  "libc",
 ]
 
-[[p
+[[package]]
+name = "slab"
+version = "0.4.7"
+source = "registry+https:

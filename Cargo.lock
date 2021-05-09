@@ -981,4 +981,5 @@ dependencies = [
 [[package]]
 name = "slab"
 version = "0.4.7"
-source = "registry+https:
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "46

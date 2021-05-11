@@ -990,4 +990,5 @@ dependencies = [
 [[package]]
 name = "smallvec"
 version = "1.9.0"
-source = "registry+https://gi
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2fd0db74

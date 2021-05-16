@@ -1024,4 +1024,5 @@ checksum = "73473c0e59e6d5812c5dfe2a064a6444949f089e20eec9a2e5506596494e4623"
 [[package]]
 name = "syn"
 version = "1.0.101"
-source = "registry+https://github.com/rust-lang/crates.io-inde
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e90cde112c4b9690b8cbe810cba9ddd8bc1d7472e

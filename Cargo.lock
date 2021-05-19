@@ -1058,4 +1058,5 @@ dependencies = [
 [[package]]
 name = "termion"
 version = "1.5.6"
-source = "registry+https://github.com/rust-lang/crates.
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "077185e2eac69c3f8379a4298e1e07cd36beb962290d

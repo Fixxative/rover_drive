@@ -1062,4 +1062,9 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "077185e2eac69c3f8379a4298e1e07cd36beb962290d4a51199acf0fdc10607e"
 dependencies = [
  "libc",
- "
+ "numtoa",
+ "redox_syscall",
+ "redox_termios",
+]
+
+[[package]]

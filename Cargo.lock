@@ -1082,4 +1082,4 @@ dependencies = [
 [[package]]
 name = "thiserror"
 version = "1.0.37"
-sou
+source = "registry+https://github.com/rust-lang/crates.io-inde

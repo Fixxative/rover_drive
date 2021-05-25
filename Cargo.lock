@@ -1102,4 +1102,5 @@ dependencies = [
 [[package]]
 name = "time"
 version = "0.1.44"
-source = "registry+https://githu
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6db9e6914ab8b1a

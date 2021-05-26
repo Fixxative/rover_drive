@@ -1120,4 +1120,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tinyvec_macr
+name = "tinyvec_macros"
+version = "0.1.0"
+source = "registry+https://github.com

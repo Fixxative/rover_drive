@@ -1170,4 +1170,5 @@ dependencies = [
 [[package]]
 name = "tokio-native-tls"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-i
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f7d995660bd2b7f8c1568414c1126076c13fb

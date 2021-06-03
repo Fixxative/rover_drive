@@ -1180,4 +1180,4 @@ dependencies = [
 [[package]]
 name = "tokio-stdin-stdout"
 version = "0.1.5"
-source = "regis
+source = "registry+https://github.com/rust-lang/crates.i

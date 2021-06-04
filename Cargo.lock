@@ -1181,4 +1181,10 @@ dependencies = [
 name = "tokio-stdin-stdout"
 version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1fc480d205310fa52f8ea65e7f9443568b6b342f326e86
+checksum = "1fc480d205310fa52f8ea65e7f9443568b6b342f326e86431d2aeb176d720c17"
+dependencies = [
+ "futures 0.1.31",
+ "tokio-io",
+]
+
+[[

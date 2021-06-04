@@ -1187,4 +1187,7 @@ dependencies = [
  "tokio-io",
 ]
 
-[[
+[[package]]
+name = "tokio-stream"
+version = "0.1.10"
+source = "registry+https

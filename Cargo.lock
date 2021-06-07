@@ -1190,4 +1190,5 @@ dependencies = [
 [[package]]
 name = "tokio-stream"
 version = "0.1.10"
-source = "registry+https
+source = "registry+https://github.com/rust-lang/crates.io-index"
+check

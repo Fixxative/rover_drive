@@ -1200,4 +1200,5 @@ dependencies = [
 
 [[package]]
 name = "tokio-tungstenite"
-versi
+version = "0.18.0"
+source = "registry+https://github.com/ru

@@ -1214,4 +1214,5 @@ dependencies = [
 
 [[package]]
 name = "tui"
-version = "0.19.0
+version = "0.19.0"
+source = "registry+https://github.com/rust-lang/crates.io-ind

@@ -1227,4 +1227,5 @@ dependencies = [
 
 [[package]]
 name = "tungstenite"
-version = "0.1
+version = "0.18.0"
+source = "registry+https://github.com/rust-lang/crates.i

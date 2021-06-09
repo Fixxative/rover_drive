@@ -1223,3 +1223,8 @@ dependencies = [
  "termion 1.5.6",
  "unicode-segmentation",
  "unicode-width",
+]
+
+[[package]]
+name = "tungstenite"
+version = "0.1

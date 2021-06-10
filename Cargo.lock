@@ -1228,4 +1228,5 @@ dependencies = [
 [[package]]
 name = "tungstenite"
 version = "0.18.0"
-source = "registry+https://github.com/rust-lang/crates.i
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "30ee6ab729cd4cf0fd55218530c4522

@@ -1241,4 +1241,11 @@ dependencies = [
  "rand",
  "sha1",
  "thiserror",
- "url
+ "url",
+ "utf-8",
+]
+
+[[package]]
+name = "typenum"
+version = "1.15.0"
+so

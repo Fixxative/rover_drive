@@ -1237,4 +1237,8 @@ dependencies = [
  "http",
  "httparse",
  "log",
- "
+ "native-tls",
+ "rand",
+ "sha1",
+ "thiserror",
+ "url

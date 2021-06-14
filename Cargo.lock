@@ -1248,4 +1248,4 @@ dependencies = [
 [[package]]
 name = "typenum"
 version = "1.15.0"
-so
+source = "registry+https://github.com/rust-lang/crates.io-i

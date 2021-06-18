@@ -1262,4 +1262,5 @@ dependencies = [
 
 [[package]]
 name = "unicode-bidi"
-ve
+version = "0.3.8"
+source = "registry+https://github.com/rust-lang/cr

@@ -1263,4 +1263,5 @@ dependencies = [
 [[package]]
 name = "unicode-bidi"
 version = "0.3.8"
-source = "registry+https://github.com/rust-lang/cr
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "099b7128301d285f79ddd55b9a83d5e

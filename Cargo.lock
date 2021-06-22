@@ -1284,4 +1284,5 @@ dependencies = [
 [[package]]
 name = "unicode-segmentation"
 version = "1.10.0"
-source = "registry+https://github.co
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0fdbf052a0783de01e9

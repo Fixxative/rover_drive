@@ -1313,4 +1313,5 @@ dependencies = [
 [[package]]
 name = "utf-8"
 version = "0.7.6"
-source = "registry+https://githu
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "09cc8ee7

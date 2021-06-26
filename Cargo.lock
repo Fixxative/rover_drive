@@ -1317,4 +1317,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "09cc8ee72d2a9becf2f2febe0205bbed8fc6615b7cb429ad062dc7b7ddd036a9"
 
 [[package]]
-name = "vcp
+name = "vcpkg"
+version = "0.2.15"
+source = "registry+https://git

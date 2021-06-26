@@ -1330,4 +1330,6 @@ checksum = "3a449064fee414fcc201356a3e6c1510f6c8829ed28bb06b91c54ebe208ce065"
 
 [[package]]
 name = "version_check"
-version = "0.9.
+version = "0.9.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+c

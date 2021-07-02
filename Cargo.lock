@@ -1349,4 +1349,5 @@ checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
 [[package]]
 name = "wasm-bindgen"
 version = "0.2.83"
-source = "registry+https://github.com/rust-lang/crates.i
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eaf9f5aceeec8be17c128b2e93e031fb8

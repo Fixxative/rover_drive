@@ -1372,4 +1372,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "wasm-bind
+name = "wasm-bindgen-macro"
+version = "0.2.83"
+source = "registry+https://githu

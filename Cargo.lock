@@ -1357,4 +1357,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "was
+name = "wasm-bindgen-backend"
+version = "0.2.83"
+source = "registry+https:/

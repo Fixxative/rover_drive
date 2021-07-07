@@ -1391,4 +1391,9 @@ dependencies = [
  "quote",
  "syn",
  "wasm-bindgen-backend",
- "was
+ "wasm-bindgen-shared",
+]
+
+[[package]]
+name = "wasm-bindgen-shared"
+version

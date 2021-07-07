@@ -1396,4 +1396,5 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-shared"
-version
+version = "0.2.83"
+source = "registry+https://github.com/rust-lang/crat

@@ -1423,4 +1423,5 @@ dependencies = [
 [[package]]
 name = "webpki-roots"
 version = "0.21.1"
-source = "registry+https://github
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "aabe153544e473b775453675

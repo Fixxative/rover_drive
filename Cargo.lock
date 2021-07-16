@@ -1421,4 +1421,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "webpki
+name = "webpki-roots"
+version = "0.21.1"
+source = "registry+https://github

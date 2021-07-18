@@ -1442,4 +1442,5 @@ dependencies = [
 [[package]]
 name = "winapi-i686-pc-windows-gnu"
 version = "0.4.0"
-source = "registry+https
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ac3b87c636

@@ -1476,4 +1476,5 @@ dependencies = [
 [[package]]
 name = "windows-sys"
 version = "0.45.0"
-source = "registry+https://github.com/rust-lang/crate
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "75283be5efb2831d37ea142365f009c02ec20

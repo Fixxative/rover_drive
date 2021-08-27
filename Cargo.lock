@@ -1500,4 +1500,5 @@ dependencies = [
 [[package]]
 name = "windows_aarch64_gnullvm"
 version = "0.42.1"
-source = "registry+https://github.com/rust-lang/crates.io-i
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8c9864e83243fdec7fc9c5444389dcbbfd258f745e785

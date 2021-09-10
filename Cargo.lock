@@ -1506,4 +1506,5 @@ checksum = "8c9864e83243fdec7fc9c5444389dcbbfd258f745e7853198f365e3c4968a608"
 [[package]]
 name = "windows_aarch64_msvc"
 version = "0.36.1"
-source = "registry+https://github.com/ru
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9bb8c3fd39ade2d67e9874ac4f3db21

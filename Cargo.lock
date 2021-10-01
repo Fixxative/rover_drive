@@ -1527,4 +1527,6 @@ version = "0.42.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "de3887528ad530ba7bdbb1faa8275ec7a1155a45ffa57c37993960277145d640"
 
-[[packa
+[[package]]
+name = "windows_i686_msvc"
+version = "0.36

@@ -1542,4 +1542,5 @@ checksum = "bf4d1122317eddd6ff351aa852118a2418ad4214e6613a50e0191f7004372605"
 [[package]]
 name = "windows_x86_64_gnu"
 version = "0.36.1"
-source = "registry+https://github.com/rust-lang/crates.io-inde
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4dcd171b8776c41b97521e5da127a2d86ad280114807d0b

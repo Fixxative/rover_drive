@@ -1547,4 +1547,5 @@ checksum = "4dcd171b8776c41b97521e5da127a2d86ad280114807d0b2ab1e462bc764d9e1"
 
 [[package]]
 name = "windows_x86_64_gnu"
-ve
+version = "0.42.1"
+source = "registry+https://github.com/rust

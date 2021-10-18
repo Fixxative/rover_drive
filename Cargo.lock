@@ -1558,4 +1558,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "628bfdf232daa22b0d64fdb62b09fcc36bb01f05a3939e20ab73aaf9470d0463"
 
 [[package]]
-name = "windows_x86_64
+name = "windows_x86_64_msvc"
+version = "0.36.1"
+source = "registry+https

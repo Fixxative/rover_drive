@@ -1565,4 +1565,5 @@ checksum = "c811ca4a8c853ef420abd8592ba53ddbbac90410fab6903b3e79972a631f7680"
 
 [[package]]
 name = "windows_x86_64_msvc"
-version = "
+version = "0.42.1"
+source = "registry+https://github.com/rust-lang/crat

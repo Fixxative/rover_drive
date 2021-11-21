@@ -56,3 +56,61 @@ Prices list and prices table can also show the 24h percentage change. Press `%` 
 ### Historical Price Chart
 
 The historical price chart is shown when pressing `g` or a number `0`...`9`.  `0` shows the last 1000 one-minute bars `1` shows the last 1000 5-minute bars, and so on. See the table below. `g` shows the graph of the currently selected symbol and time interval. On start the default is `BTCUSDT` 1-min bars.
+
+<img src="assets/graph.png" alt="graph" style="zoom:37%;" />
+
+The time scales can be selected with the keys `0`...`9` as follows:
+
+| Key  | Interval | Approx. time period |
+| ---- | -------- | ------------------- |
+| 0    | 1 min    | 17 hours |
+| 1    | 5 min    |3.5 days|
+| 2    | 15 min   |10 days|
+| 3    | 30 min   |3 weeks|
+| 4    | 1 h      |6 weeks|
+| 5    | 2 h      |12 weeks|
+| 6    | 4 h      |5.5 months|
+| 7    | 8 h      |11 months|
+| 8    | 12 h     |16 months|
+| 9    | 1 d      |2 years 9 months|
+| g    | currently selected |  |
+
+By default the most liquid currency pair (usually `BTCUSDT`) is shown. 
+
+Note that the chart is <u>static</u>. You have to press `g` to refresh it.
+
+#### Symbol selection
+
+To select another currency pair, press `s`. Highlight the desired pair by moving the cursor. After pressing return the price chart for the selected pair is shown.
+
+### Help
+
+Press `h` to see the help page.
+
+## Command Summary
+
+| Key       | Command                                         | Remarks                                   |
+| --------- | ----------------------------------------------- | ----------------------------------------- |
+| h         | Display **h**elp                                |                                           |
+| l         | Show prices **I**ist                            |                                           |
+| t         | Show prices **t**able                           |                                           |
+| g         | Show **g**raph of current symbol and time-scale | Default symbol `BTCUSDT`, time-scale 1min |
+| 0..9      | Show graph at time-scale 1min...1day            | See table above                           |
+| s         | **S**elect symbol                               |                                           |
+| Home      | Set cursor to top left symbol                   | For select symbol page only               |
+| %         | Toggle percent/price display                    | For list and table and views only         |
+| x         | Toggle e**x**tended/reduced view                | For table view only                       |
+| a         | Show **a**bout page                             |                                           |
+| Esc       | Go back to previous view                        |                                           |
+| q, Ctrl-c | Quit                                            |                                           |
+
+
+
+## Todo/Ideas
+- Use `Decimal64` in Graph page instead of `f64`
+- Live update price chart, or at least show price update in the message bar?
+- Some currency information, such as market cap, would be nice. [Coincap](coincap.io) has an open [API](https://docs.coincap.io/).
+
+## Disclaimers
+
+There is no connection to [coinlive.io]() or [coinlive.com]().

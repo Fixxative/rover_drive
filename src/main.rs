@@ -61,3 +61,59 @@ async fn listen_keys(tx: UnboundedSender<Msg>) -> Result<(), String> {
                 Key::Char('5')  => { tx.send(Msg::Graph(Some(5))).expect("UI failed"); },
                 Key::Char('6')  => { tx.send(Msg::Graph(Some(6))).expect("UI failed"); },
                 Key::Char('7')  => { tx.send(Msg::Graph(Some(7))).expect("UI failed"); },
+                Key::Char('8')  => { tx.send(Msg::Graph(Some(8))).expect("UI failed"); },
+                Key::Char('9')  => { tx.send(Msg::Graph(Some(9))).expect("UI failed"); },
+                Key::Up         => { tx.send(Msg::ArrowUp).expect("UI failed"); },
+                Key::Down       => { tx.send(Msg::ArrowDown).expect("UI failed"); },
+                Key::Left       => { tx.send(Msg::ArrowLeft).expect("UI failed"); },
+                Key::Right      => { tx.send(Msg::ArrowRight).expect("UI failed"); },
+                Key::Home       => { tx.send(Msg::Home).expect("UI failed"); },
+                Key::Char('\n') => { tx.send(Msg::Enter).expect("UI failed"); },
+                Key::Esc        => { tx.send(Msg::Esc).expect("UI failed"); },
+                key => { 
+                    tx.send(Msg::Msg(format!("Unknown command {:?}", key)))
+                      .map_err(|e| format!("UI failed: {:?}", e))?; 
+                }
+            }
+        }
+        tokio::time::sleep(Duration::from_millis(LISTEN_KEYS_SLEEP_MILLIS)).await;
+    }
+    Ok(())
+}
+
+/// Websocket stream
+async fn ws(uri: &str, ui_tx: UnboundedSender<Msg>) -> Result<(), String> {
+    let uri: Url = Url::parse(uri).map_err(|e| format!("Bad url: {:?}", e))?;
+    let (ws_stream, response) = match connect_async(uri).await {
+        Ok((ws_stream, response)) => { (ws_stream, response) },
+        Err(e) => { 
+            ui_tx.send(Msg::Msg(format!("Error connecting: {:?}", e)))
+                 .map_err(|e| format!("UI failed: {:?}", e))?;
+            return Ok(());
+        }
+    };
+    ui_tx.send(Msg::Msg(format!("Websocket connected:\n{:?}", response)))
+         .map_err(|e| format!("UI failed: {:?}", e))?;
+
+    let (_, mut read) = ws_stream.split();
+
+    ui_tx.send(Msg::Msg(String::from("Starting..."))).expect("UI failed");
+    loop {
+        let next = read.next().await;
+        let now = now_timestamp();
+        match next {
+            Some(msg) => {
+                match msg {
+                    Ok(msg)  => {
+                        let msg = msg.to_string();
+                        ui_tx.send(Msg::WS(now, msg))
+                             .map_err(|e| format!("UI failed: {:?}", e))?;
+                    }, 
+                    Err(e) => {
+                        ui_tx.send(Msg::Msg(format!("Error: {:?}", e)))
+                             .map_err(|e| format!("UI failed: {:?}", e))?;
+                        return Err(format!("Websocket error: {:?}", e));
+                    }
+                }
+            },
+            None => {

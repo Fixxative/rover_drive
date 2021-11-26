@@ -117,3 +117,52 @@ async fn ws(uri: &str, ui_tx: UnboundedSender<Msg>) -> Result<(), String> {
                 }
             },
             None => {
+                ui_tx.send(Msg::Msg(String::from("Stream end")))
+                     .map_err(|e| format!("UI failed: {:?}", e))?;
+                break;
+            }
+        }
+    }
+    Ok(())
+}
+
+/// Essentially calls `get_infos`, sorts the `Info` vector and sends the `Msg`s.
+async fn get_symbols_async(tx: UnboundedSender<Msg>) -> Result<(), String> {
+    tx.send(Msg::Msg(String::from("Getting symbols..."))).map_err(|e| format!("UI failed: {:?}", e))?;
+    if let Ok(infos) = get_infos().await {
+        let infos = sort_infos(infos);
+        tx.send(Msg::Msg(format!("Got {} symbols", infos.len()))).map_err(|e| format!("UI failed: {:?}", e))?;
+        tx.send(Msg::Infos(infos)).map_err(|e| format!("UI failed: {:?}", e))?;
+    } else {
+        tx.send(Msg::Msg(String::from("Failed to get symbols"))).map_err(|e| format!("UI failed: {:?}", e))?;
+        tx.send(Msg::Stop).map_err(|e| format!("UI failed: {:?}", e))?; 
+    }
+    Ok(())
+}
+
+/// The main function
+#[tokio::main]
+async fn main() -> Result<(),Box<dyn std::error::Error>> {
+
+    let _matches = Command::new("coinlive")
+        .about("Live cryptocurrency prices CLI")
+        .version(version!())
+        .author("Mayer Analytics. https://github.com/mayeranalytics/coinlive")
+        .get_matches();
+
+    // terminal raw mode to allow reading stdin one key at a time
+    let stdout = io::stdout().into_raw_mode().unwrap();
+    let backend = TermionBackend::new(stdout);
+    let terminal = Terminal::new(backend)?;
+    let ui = UI::new(terminal);
+
+    tokio::spawn(get_symbols_async(ui.tx.clone()));
+
+    let listen_keys_handle = tokio::spawn(listen_keys(ui.tx.clone()));
+
+    ui.tx.send(Msg::Msg(String::from("Starting stream... ")))?;
+    let ws_task = tokio::spawn(ws(URI_WS_TICKER, ui.tx));
+
+    future::select(ws_task, future::select(ui.handle, listen_keys_handle)).await;
+    Ok(())
+}

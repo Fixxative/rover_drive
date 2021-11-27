@@ -2,4 +2,6 @@
 use tui::{
     style::{Style, Color, Modifier},
     widgets::{Paragraph},
-    layout::{Alignment, Rect, Layout, Di
+    layout::{Alignment, Rect, Layout, Direction, Constraint},
+    text::{Span, Spans},
+    back

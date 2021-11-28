@@ -11,4 +11,5 @@ use version::version;
 
 /// The about paragraph
 fn about<'a>() -> (Paragraph<'a>, u16) {
-  
+    let txt = vec![
+        Spans::from(Sp

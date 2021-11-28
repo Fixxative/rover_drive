@@ -9,4 +9,6 @@ use tui::{
 };
 use version::version;
 
-/// 
+/// The about paragraph
+fn about<'a>() -> (Paragraph<'a>, u16) {
+  

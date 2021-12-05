@@ -13,4 +13,5 @@ use version::version;
 fn about<'a>() -> (Paragraph<'a>, u16) {
     let txt = vec![
         Spans::from(Span::styled("     ####    #####    ######  ##   ##  ####      ######  ##   ##  #######  ", Style::default().fg(Color::LightCyan))),
-        Spans::from(Span::styled("    ##  ##  ### ###     ##    ###  ##   ##         ##    ##   ##   ##   #  ", Style::default().fg(Color::Li
+        Spans::from(Span::styled("    ##  ##  ### ###     ##    ###  ##   ##         ##    ##   ##   ##   #  ", Style::default().fg(Color::LightCyan))),
+        Spans::from(Span::styled("   ##       ##

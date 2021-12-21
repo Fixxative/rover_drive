@@ -22,4 +22,5 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
         Spans::from(Vec::new()),
         Spans::from(Vec::new()),
         Spans::from(Span::styled("Live cryptocurrency prices CLI",
-                                 Style::default().fg(Color::LightC
+                                 Style::default().fg(Color::LightCyan).add_modifier(Modifier::ITALIC))),
+        Spans::from(Ve

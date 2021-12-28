@@ -25,4 +25,4 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
                                  Style::default().fg(Color::LightCyan).add_modifier(Modifier::ITALIC))),
         Spans::from(Vec::new()),
         Spans::from(Vec::new()),
-        Spans::from(Spa
+        Spans::from(Span::styled("(c) Mayer Analytics, GPL-3.0", Style::default().fg(Colo

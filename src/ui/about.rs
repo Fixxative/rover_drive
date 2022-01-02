@@ -27,4 +27,4 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
         Spans::from(Vec::new()),
         Spans::from(Span::styled("(c) Mayer Analytics, GPL-3.0", Style::default().fg(Color::Red))),
         Spans::from(Vec::new()),
-        Spans::from(Span:
+        Spans::from(Span::styled("https://github.com/mayeranalytics/coinli

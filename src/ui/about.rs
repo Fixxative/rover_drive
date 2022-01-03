@@ -32,4 +32,5 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
         Spans::from(Span::styled(format!("Version {}", version!()), Style::default().fg(Color::Gray))),
     ];
     let h = txt.len() as u16;
-    let p =
+    let p = Paragraph::new(txt)
+        .style(Style::default().f

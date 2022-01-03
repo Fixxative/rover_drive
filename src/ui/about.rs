@@ -29,4 +29,4 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
         Spans::from(Vec::new()),
         Spans::from(Span::styled("https://github.com/mayeranalytics/coinlive", Style::default().fg(Color::Green))),
         Spans::from(Vec::new()),
-        Spans::from(Span::styled(format!(
+        Spans::from(Span::styled(format!("Version {}", version!()), Style::default().fg(Color::Gray))

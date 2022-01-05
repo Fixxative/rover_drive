@@ -35,4 +35,8 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
     let p = Paragraph::new(txt)
         .style(Style::default().fg(Color::LightCyan))
         .alignment(Alignment::Center);
- 
+    (p, h)
+}
+
+/// Draw the message bar at the bottom
+pub fn draw_about<B: B

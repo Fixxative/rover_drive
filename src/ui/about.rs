@@ -33,4 +33,6 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
     ];
     let h = txt.len() as u16;
     let p = Paragraph::new(txt)
-        .style(Style::default().f
+        .style(Style::default().fg(Color::LightCyan))
+        .alignment(Alignment::Center);
+ 

@@ -39,4 +39,6 @@ fn about<'a>() -> (Paragraph<'a>, u16) {
 }
 
 /// Draw the message bar at the bottom
-pub fn draw_about<B: B
+pub fn draw_about<B: Backend>(f: &mut Frame<B>, area: Rect) {
+    let about = about();
+ 

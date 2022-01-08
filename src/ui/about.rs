@@ -45,4 +45,6 @@ pub fn draw_about<B: Backend>(f: &mut Frame<B>, area: Rect) {
     let vert_space = if area.height > h { (area.height - h)/2 } else { 0 }; 
     let ver_chunk = Layout::default()
         .direction(Direction::Vertical)
-  
+        .constraints(
+            [ Constraint::Length(vert_space)
+          

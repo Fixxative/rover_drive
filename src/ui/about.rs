@@ -52,4 +52,5 @@ pub fn draw_about<B: Backend>(f: &mut Frame<B>, area: Rect) {
             ].as_ref()
         )
         .split(area)[1];
-    f.render_w
+    f.render_widget(about, ver_chunk);
+}

@@ -49,4 +49,7 @@ pub fn draw_about<B: Backend>(f: &mut Frame<B>, area: Rect) {
             [ Constraint::Length(vert_space)
             , Constraint::Min(0)
             , Constraint::Max(0)
-         
+            ].as_ref()
+        )
+        .split(area)[1];
+    f.render_w

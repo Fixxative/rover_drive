@@ -14,4 +14,7 @@ use std::time::{UNIX_EPOCH, Duration};
 use inlinable_string::InlineString;
 
 
-/// Widget 
+/// Widget Graph
+/// 
+/// Shows a time/closing-price graph of a symbol.
+p

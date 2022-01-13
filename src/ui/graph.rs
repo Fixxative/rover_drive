@@ -17,4 +17,6 @@ use inlinable_string::InlineString;
 /// Widget Graph
 /// 
 /// Shows a time/closing-price graph of a symbol.
-p
+pub struct Graph<'a> {
+    symbol: Symbol,
+    infos: &'a Vec<Info>,   // 

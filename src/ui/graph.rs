@@ -19,4 +19,6 @@ use inlinable_string::InlineString;
 /// Shows a time/closing-price graph of a symbol.
 pub struct Graph<'a> {
     symbol: Symbol,
-    infos: &'a Vec<Info>,   // 
+    infos: &'a Vec<Info>,   // sorted list of `Info`
+    klines: &'a Vec<Bar>,
+    interval

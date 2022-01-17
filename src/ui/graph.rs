@@ -26,4 +26,8 @@ pub struct Graph<'a> {
 
 impl<'a> Graph<'a> {
     pub fn new(infos: &'a Vec<Info>, klines: &'a Vec<Bar>, interval: Interval, symbol: Symbol) -> Graph<'a> {
-        Graph { symbol: symbol, infos: infos, klines: klines, interval: i
+        Graph { symbol: symbol, infos: infos, klines: klines, interval: interval }
+    }
+}
+
+impl<'a> Widget for Graph<'a> {

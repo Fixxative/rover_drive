@@ -25,3 +25,4 @@ pub struct Graph<'a> {
 }
 
 impl<'a> Graph<'a> {
+    pub fn new(infos: &'a Vec<Info>, klines: &'a Vec<Bar>, 

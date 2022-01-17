@@ -21,4 +21,7 @@ pub struct Graph<'a> {
     symbol: Symbol,
     infos: &'a Vec<Info>,   // sorted list of `Info`
     klines: &'a Vec<Bar>,
-    interval
+    interval: Interval,     // 1m, 3m, 5m, etc.
+}
+
+impl<'a> Graph<'a> {

@@ -34,4 +34,7 @@ impl<'a> Widget for Graph<'a> {
     fn render(self, area: Rect, buf: &mut Buffer) {
         if self.klines.len() < 1 {
             Paragraph::new("No data!")
-            .style(Style::default().fg(Color:
+            .style(Style::default().fg(Color::Red))
+            .block(
+                Block::default()
+      

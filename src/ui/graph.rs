@@ -37,4 +37,4 @@ impl<'a> Widget for Graph<'a> {
             .style(Style::default().fg(Color::Red))
             .block(
                 Block::default()
-      
+                    .style(Style::default().fg(Color::White)

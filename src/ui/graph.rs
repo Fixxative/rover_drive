@@ -39,4 +39,7 @@ impl<'a> Widget for Graph<'a> {
                 Block::default()
                     .style(Style::default().fg(Color::White))
                     .title("Error")
-            ).render(area, b
+            ).render(area, buf);
+            return;
+        }
+        let mut t_min: 

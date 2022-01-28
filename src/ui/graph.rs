@@ -46,3 +46,4 @@ impl<'a> Widget for Graph<'a> {
         let mut t_max: f64 = 0.0;
         let mut p_min: f64 = f64::MAX;
         let mut p_max: f64 = 0.0;
+        // we want to show high and low only. This gives

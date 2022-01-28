@@ -42,4 +42,6 @@ impl<'a> Widget for Graph<'a> {
             ).render(area, buf);
             return;
         }
-        let mut t_min: 
+        let mut t_min: f64 = f64::MAX;
+        let mut t_max: f64 = 0.0;
+        let mu

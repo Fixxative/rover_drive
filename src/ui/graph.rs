@@ -44,4 +44,5 @@ impl<'a> Widget for Graph<'a> {
         }
         let mut t_min: f64 = f64::MAX;
         let mut t_max: f64 = 0.0;
-        let mu
+        let mut p_min: f64 = f64::MAX;
+        let mut p_max: f64 = 0.0;

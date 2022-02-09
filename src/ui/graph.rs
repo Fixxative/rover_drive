@@ -48,4 +48,4 @@ impl<'a> Widget for Graph<'a> {
         let mut p_max: f64 = 0.0;
         // we want to show high and low only. This gives a fuzzier, less crisp graph. 
         // The advantage is, obviously, that high and low become visible.
-        let mut data: Vec<(f64,f64)> 
+        let mut data: Vec<(f64,f64)> = Vec::with_capacity(self.klines.len()*2+1); // two values per ohlc

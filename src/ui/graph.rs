@@ -51,4 +51,5 @@ impl<'a> Widget for Graph<'a> {
         let mut data: Vec<(f64,f64)> = Vec::with_capacity(self.klines.len()*2+1); // two values per ohlc bar plus the first open
         let delta = (self.klines[1].t - self.klines[0].t) as f64;
         data.push((self.klines[0].t as f64, self.klines[0].o as f64));
-        for bar in self.kl
+        for bar in self.klines.iter() {
+            let t_o = bar.t as  f64;    // because

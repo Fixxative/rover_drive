@@ -52,4 +52,6 @@ impl<'a> Widget for Graph<'a> {
         let delta = (self.klines[1].t - self.klines[0].t) as f64;
         data.push((self.klines[0].t as f64, self.klines[0].o as f64));
         for bar in self.klines.iter() {
-            let t_o = bar.t as  f64;    // because
+            let t_o = bar.t as  f64;    // because bar.t is timestamp of open
+            let t_c = t_o + delta;
+            l

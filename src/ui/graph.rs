@@ -54,4 +54,6 @@ impl<'a> Widget for Graph<'a> {
         for bar in self.klines.iter() {
             let t_o = bar.t as  f64;    // because bar.t is timestamp of open
             let t_c = t_o + delta;
-            let (o,h,l,c) = (bar.o as f64, bar.h as f64, bar.l as f64, 
+            let (o,h,l,c) = (bar.o as f64, bar.h as f64, bar.l as f64, bar.c as f64);
+            // push to data
+            if c >= o { // 

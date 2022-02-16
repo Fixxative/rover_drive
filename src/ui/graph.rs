@@ -58,4 +58,5 @@ impl<'a> Widget for Graph<'a> {
             // push to data
             if c >= o { // first high then low
                 data.push((t_o + delta/2.0, h));
- 
+                data.push((t_c, l));
+            } else {    // first low

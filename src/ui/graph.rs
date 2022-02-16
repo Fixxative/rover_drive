@@ -56,4 +56,6 @@ impl<'a> Widget for Graph<'a> {
             let t_c = t_o + delta;
             let (o,h,l,c) = (bar.o as f64, bar.h as f64, bar.l as f64, bar.c as f64);
             // push to data
-            if c >= o { // 
+            if c >= o { // first high then low
+                data.push((t_o + delta/2.0, h));
+ 

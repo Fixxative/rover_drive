@@ -63,4 +63,6 @@ impl<'a> Widget for Graph<'a> {
                 data.push((t_o + delta/2.0, l));
                 data.push((t_c, h));
             }
-            // update the ex
+            // update the extrema
+            if h > p_max { p_max = h; }
+            if l

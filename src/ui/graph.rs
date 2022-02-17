@@ -65,4 +65,6 @@ impl<'a> Widget for Graph<'a> {
             }
             // update the extrema
             if h > p_max { p_max = h; }
-            if l
+            if l < p_min { p_min = l; }
+            if t_c > t_max { t_max = t_c; }
+ 

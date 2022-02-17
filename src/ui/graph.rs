@@ -61,4 +61,6 @@ impl<'a> Widget for Graph<'a> {
                 data.push((t_c, l));
             } else {    // first low then high
                 data.push((t_o + delta/2.0, l));
-              
+                data.push((t_c, h));
+            }
+            // update the ex

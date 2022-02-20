@@ -67,4 +67,7 @@ impl<'a> Widget for Graph<'a> {
             if h > p_max { p_max = h; }
             if l < p_min { p_min = l; }
             if t_c > t_max { t_max = t_c; }
- 
+            if t_o < t_min { t_min = t_o; }
+
+        }
+        l

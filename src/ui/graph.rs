@@ -71,3 +71,6 @@ impl<'a> Widget for Graph<'a> {
 
         }
         let (p_min, p_max) = f64_nice_range(p_min, p_max);
+        let datasets = vec![
+            Dataset::default()
+       

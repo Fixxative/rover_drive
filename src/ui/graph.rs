@@ -70,4 +70,4 @@ impl<'a> Widget for Graph<'a> {
             if t_o < t_min { t_min = t_o; }
 
         }
-        l
+        let (p_min, p_max) = f64_nice_range(p_min, p_max);

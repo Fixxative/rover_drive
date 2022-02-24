@@ -74,4 +74,5 @@ impl<'a> Widget for Graph<'a> {
         let datasets = vec![
             Dataset::default()
                 //.name(self.symbol.unwrap_or(&default_name))
-          
+                .marker(symbols::Marker::Braille)
+                .graph_ty

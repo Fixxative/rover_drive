@@ -75,4 +75,5 @@ impl<'a> Widget for Graph<'a> {
             Dataset::default()
                 //.name(self.symbol.unwrap_or(&default_name))
                 .marker(symbols::Marker::Braille)
-                .graph_ty
+                .graph_type(GraphType::Line)
+                .style(Style::default().fg(Color::Cy

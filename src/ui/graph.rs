@@ -76,4 +76,7 @@ impl<'a> Widget for Graph<'a> {
                 //.name(self.symbol.unwrap_or(&default_name))
                 .marker(symbols::Marker::Braille)
                 .graph_type(GraphType::Line)
-                .style(Style::default().fg(Color::Cy
+                .style(Style::default().fg(Color::Cyan))
+                .data(data.as_slice())
+        ];
+       

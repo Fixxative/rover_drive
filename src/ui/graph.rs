@@ -81,4 +81,4 @@ impl<'a> Widget for Graph<'a> {
         ];
         let t1 = DateTime::<Utc>::from(UNIX_EPOCH + Duration::from_millis(t_min as u64));
         let t2 = DateTime::<Utc>::from(UNIX_EPOCH + Duration::from_millis(((t_min+t_max)/2.0) as u64));
-        l
+        let t3 = DateTime::<Utc>::from(UNIX_EPOCH + Duration::from_mil

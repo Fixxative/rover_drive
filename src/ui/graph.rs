@@ -79,4 +79,5 @@ impl<'a> Widget for Graph<'a> {
                 .style(Style::default().fg(Color::Cyan))
                 .data(data.as_slice())
         ];
-        let t1 = DateTime::<Utc>::from(UNIX_EPOCH + Duration::from_millis(t_min
+        let t1 = DateTime::<Utc>::from(UNIX_EPOCH + Duration::from_millis(t_min as u64));
+        let t2 = DateTime::<Utc>::from(UNIX_EPOCH + 

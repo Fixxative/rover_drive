@@ -87,4 +87,5 @@ impl<'a> Widget for Graph<'a> {
                 t1.format("%H:%M").to_string(),
                 Style::default().add_modifier(Modifier::BOLD),
             ),
-            Spa
+            Span::raw(t2.format("%Y-%m-%d %H:%M").to_string()),
+    

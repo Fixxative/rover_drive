@@ -84,4 +84,5 @@ impl<'a> Widget for Graph<'a> {
         let t3 = DateTime::<Utc>::from(UNIX_EPOCH + Duration::from_millis(t_max as u64));
         let x_labels = vec![
             Span::styled(
-                t1.format("%H:%M").to_str
+                t1.format("%H:%M").to_string(),
+                Style::default().add_mo

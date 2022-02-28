@@ -85,4 +85,6 @@ impl<'a> Widget for Graph<'a> {
         let x_labels = vec![
             Span::styled(
                 t1.format("%H:%M").to_string(),
-                Style::default().add_mo
+                Style::default().add_modifier(Modifier::BOLD),
+            ),
+            Spa

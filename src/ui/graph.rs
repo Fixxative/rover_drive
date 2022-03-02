@@ -93,4 +93,6 @@ impl<'a> Widget for Graph<'a> {
                 Style::default().add_modifier(Modifier::BOLD),
             ),
         ];
-        le
+        let y_labels = vec![
+            Span::styled(
+               

@@ -90,4 +90,7 @@ impl<'a> Widget for Graph<'a> {
             Span::raw(t2.format("%Y-%m-%d %H:%M").to_string()),
             Span::styled(
                 t3.format("%Y-%m-%d %H:%M").to_string(),
-                Style::default().add_m
+                Style::default().add_modifier(Modifier::BOLD),
+            ),
+        ];
+        le

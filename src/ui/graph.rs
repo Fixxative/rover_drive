@@ -95,4 +95,5 @@ impl<'a> Widget for Graph<'a> {
         ];
         let y_labels = vec![
             Span::styled(
-               
+                p_min.compact_str(),
+                Style::default().add_m

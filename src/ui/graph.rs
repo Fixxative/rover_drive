@@ -98,4 +98,5 @@ impl<'a> Widget for Graph<'a> {
                 p_min.compact_str(),
                 Style::default().add_modifier(Modifier::BOLD),
             ),
-            Span::raw(((
+            Span::raw(((p_min+p_max)/2.0).compact_str()),
+            Span::s

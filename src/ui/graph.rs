@@ -102,4 +102,7 @@ impl<'a> Widget for Graph<'a> {
             Span::styled(
                 p_max.compact_str(),
                 Style::default().add_modifier(Modifier::BOLD),
-           
+            ),
+        ];
+        let title: InlineString = self.symbol;
+       

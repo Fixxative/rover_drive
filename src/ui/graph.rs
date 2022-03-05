@@ -106,4 +106,5 @@ impl<'a> Widget for Graph<'a> {
         ];
         let title: InlineString = self.symbol;
         let graph = Chart::new(datasets)
-            .blo
+            .block(Block::default().title(String::from(&*title)))
+       

@@ -107,4 +107,5 @@ impl<'a> Widget for Graph<'a> {
         let title: InlineString = self.symbol;
         let graph = Chart::new(datasets)
             .block(Block::default().title(String::from(&*title)))
-       
+            .x_axis(Axis::default()
+                .style(Style

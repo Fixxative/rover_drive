@@ -108,4 +108,5 @@ impl<'a> Widget for Graph<'a> {
         let graph = Chart::new(datasets)
             .block(Block::default().title(String::from(&*title)))
             .x_axis(Axis::default()
-                .style(Style
+                .style(Style::default().fg(Color::White))
+                .bounds([t_min,

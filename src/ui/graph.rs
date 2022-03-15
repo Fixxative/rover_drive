@@ -109,4 +109,6 @@ impl<'a> Widget for Graph<'a> {
             .block(Block::default().title(String::from(&*title)))
             .x_axis(Axis::default()
                 .style(Style::default().fg(Color::White))
-                .bounds([t_min,
+                .bounds([t_min, t_max])
+                .labels(x_labels))
+            .y_

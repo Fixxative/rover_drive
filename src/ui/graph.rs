@@ -115,4 +115,6 @@ impl<'a> Widget for Graph<'a> {
                 //.title(Span::styled("", Style::default().fg(Color::Red)))
                 .style(Style::default().fg(Color::White))
                 .bounds([p_min, p_max])
-  
+                .labels(y_labels));
+        graph.render(area, buf);
+   

@@ -113,4 +113,6 @@ impl<'a> Widget for Graph<'a> {
                 .labels(x_labels))
             .y_axis(Axis::default()
                 //.title(Span::styled("", Style::default().fg(Color::Red)))
-                .style(Style::default
+                .style(Style::default().fg(Color::White))
+                .bounds([p_min, p_max])
+  

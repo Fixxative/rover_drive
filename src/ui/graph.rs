@@ -117,4 +117,5 @@ impl<'a> Widget for Graph<'a> {
                 .bounds([p_min, p_max])
                 .labels(y_labels));
         graph.render(area, buf);
-   
+    }
+}

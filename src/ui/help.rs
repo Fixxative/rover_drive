@@ -2,4 +2,7 @@
 use tui::{
     style::{Style, Color, Modifier},
     widgets::{Block, Borders, Paragraph},
-    text::
+    text::{Span, Spans},
+};
+
+pub fn help<'a>() -> Paragraph<'a>

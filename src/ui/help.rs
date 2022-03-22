@@ -7,4 +7,6 @@ use tui::{
 
 pub fn help<'a>() -> Paragraph<'a> {
     let help: Vec<(&str, &str)> = vec!
-    [ ("h",    "Disp
+    [ ("h",    "Display help")
+    , ("l",    "Show price list")
+    , ("t",    "Sho

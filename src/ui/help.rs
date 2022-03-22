@@ -5,4 +5,6 @@ use tui::{
     text::{Span, Spans},
 };
 
-pub fn help<'a>() -> Paragraph<'a>
+pub fn help<'a>() -> Paragraph<'a> {
+    let help: Vec<(&str, &str)> = vec!
+    [ ("h",    "Disp

@@ -10,4 +10,6 @@ pub fn help<'a>() -> Paragraph<'a> {
     [ ("h",    "Display help")
     , ("l",    "Show price list")
     , ("t",    "Show price table")
-    , ("g",    "Show graph at current time
+    , ("g",    "Show graph at current time scale")
+    , ("0..9", "Show graph at time scale 0 to 9 (1m to 1d)")
+    , ("s

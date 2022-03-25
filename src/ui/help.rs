@@ -9,4 +9,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     let help: Vec<(&str, &str)> = vec!
     [ ("h",    "Display help")
     , ("l",    "Show price list")
-    , ("t",    "Sho
+    , ("t",    "Show price table")
+    , ("g",    "Show graph at current time

@@ -13,4 +13,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     , ("g",    "Show graph at current time scale")
     , ("0..9", "Show graph at time scale 0 to 9 (1m to 1d)")
     , ("s",    "Select symbol")
-    , ("Home", "Set cursor to t
+    , ("Home", "Set cursor to top left symbol (select symbol page)")
+    , ("%",    "Toggle perc

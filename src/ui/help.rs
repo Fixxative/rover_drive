@@ -17,4 +17,6 @@ pub fn help<'a>() -> Paragraph<'a> {
     , ("%",    "Toggle percent/price display")
     , ("x",    "Toggle extended/reduced view (Table display)")
     , ("a",    "Display about page")
-    , ("Esc",  "Go b
+    , ("Esc",  "Go back to previous view")
+    , ("q",    "Quit")
+    , ("C-c",  "Quit")

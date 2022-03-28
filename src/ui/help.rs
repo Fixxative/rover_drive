@@ -15,4 +15,6 @@ pub fn help<'a>() -> Paragraph<'a> {
     , ("s",    "Select symbol")
     , ("Home", "Set cursor to top left symbol (select symbol page)")
     , ("%",    "Toggle percent/price display")
-    , ("x",    "Toggle extended/reduced view (T
+    , ("x",    "Toggle extended/reduced view (Table display)")
+    , ("a",    "Display about page")
+    , ("Esc",  "Go b

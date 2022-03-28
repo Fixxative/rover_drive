@@ -20,3 +20,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     , ("Esc",  "Go back to previous view")
     , ("q",    "Quit")
     , ("C-c",  "Quit")
+    ];
+    let char_style = Style::default().add_modifier(Modifi

@@ -21,4 +21,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     , ("q",    "Quit")
     , ("C-c",  "Quit")
     ];
-    let char_style = Style::default().add_modifier(Modifi
+    let char_style = Style::default().add_modifier(Modifier::ITALIC).bg(Color::White).fg(Color::Black);
+    let w

@@ -24,3 +24,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     let char_style = Style::default().add_modifier(Modifier::ITALIC).bg(Color::White).fg(Color::Black);
     let width: usize = help.iter().map(|tup| tup.0.len()).max().unwrap_or(4);
     let text: Vec<tui::text::Spans> = help.iter().map(|(k, txt)| {
+        Spans::from(vec![
+            Span::styled(format!

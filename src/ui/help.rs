@@ -22,4 +22,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     , ("C-c",  "Quit")
     ];
     let char_style = Style::default().add_modifier(Modifier::ITALIC).bg(Color::White).fg(Color::Black);
-    let w
+    let width: usize = help.iter().map(|tup| tup.0.len()).max().unwrap_or(4);
+  

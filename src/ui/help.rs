@@ -26,4 +26,6 @@ pub fn help<'a>() -> Paragraph<'a> {
     let text: Vec<tui::text::Spans> = help.iter().map(|(k, txt)| {
         Spans::from(vec![
             Span::styled(format!(" {:<width$} ", k, width=width),char_style),
-            Span::raw
+            Span::raw(format!("  {}", *txt)),
+        ])
+    }).colle

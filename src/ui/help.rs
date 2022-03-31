@@ -25,4 +25,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     let width: usize = help.iter().map(|tup| tup.0.len()).max().unwrap_or(4);
     let text: Vec<tui::text::Spans> = help.iter().map(|(k, txt)| {
         Spans::from(vec![
-            Span::styled(format!
+            Span::styled(format!(" {:<width$} ", k, width=width),char_style),
+            Span::raw

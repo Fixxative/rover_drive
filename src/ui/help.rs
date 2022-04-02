@@ -28,4 +28,6 @@ pub fn help<'a>() -> Paragraph<'a> {
             Span::styled(format!(" {:<width$} ", k, width=width),char_style),
             Span::raw(format!("  {}", *txt)),
         ])
-    }).colle
+    }).collect();
+    Paragraph::new(text)
+        .block(Block::def

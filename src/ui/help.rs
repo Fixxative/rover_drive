@@ -30,4 +30,5 @@ pub fn help<'a>() -> Paragraph<'a> {
         ])
     }).collect();
     Paragraph::new(text)
-        .block(Block::def
+        .block(Block::default().title("Help").borders(Borders::ALL))
+        .style(Styl

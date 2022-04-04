@@ -31,4 +31,5 @@ pub fn help<'a>() -> Paragraph<'a> {
     }).collect();
     Paragraph::new(text)
         .block(Block::default().title("Help").borders(Borders::ALL))
-        .style(Styl
+        .style(Style::default().fg(Color::White).bg(Color::Black))
+}

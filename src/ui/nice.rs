@@ -5,3 +5,6 @@ use dec::Decimal64;
 /*********************************************** DecNice ***********************************************/
 
 /// Provides the functions `abs`, `floor`, `ceil`, `decomp` and `nice`
+pub trait Dec64Nice {
+    /// Return absolute value
+    fn abs(self: 

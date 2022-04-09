@@ -7,4 +7,5 @@ use dec::Decimal64;
 /// Provides the functions `abs`, `floor`, `ceil`, `decomp` and `nice`
 pub trait Dec64Nice {
     /// Return absolute value
-    fn abs(self: 
+    fn abs(self: Self) -> Self;
+    /// Return floor (largest integer smaller th

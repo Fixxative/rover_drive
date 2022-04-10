@@ -8,4 +8,6 @@ use dec::Decimal64;
 pub trait Dec64Nice {
     /// Return absolute value
     fn abs(self: Self) -> Self;
-    /// Return floor (largest integer smaller th
+    /// Return floor (largest integer smaller than input)
+    fn floor(self: Self) -> Self;
+    /// Return ceilin

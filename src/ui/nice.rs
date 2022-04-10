@@ -10,4 +10,5 @@ pub trait Dec64Nice {
     fn abs(self: Self) -> Self;
     /// Return floor (largest integer smaller than input)
     fn floor(self: Self) -> Self;
-    /// Return ceilin
+    /// Return ceiling (smallest integer larger than input)
+    fn ceil(sel

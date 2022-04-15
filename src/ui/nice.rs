@@ -12,4 +12,5 @@ pub trait Dec64Nice {
     fn floor(self: Self) -> Self;
     /// Return ceiling (smallest integer larger than input)
     fn ceil(self: Self) -> Self;
-    /// Return exponent and mantissa 
+    /// Return exponent and mantissa such that 1.0 <= mantissa < 10.0
+    fn decomp(sel

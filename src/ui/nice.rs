@@ -14,4 +14,8 @@ pub trait Dec64Nice {
     fn ceil(self: Self) -> Self;
     /// Return exponent and mantissa such that 1.0 <= mantissa < 10.0
     fn decomp(self: Self) -> (i32, Self);
-    /// Round to a near 'nice' numbe
+    /// Round to a near 'nice' number
+    fn nice(self: Self, round: bool) -> Self;
+}
+
+impl Dec64Nice 

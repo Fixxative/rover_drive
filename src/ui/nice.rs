@@ -18,4 +18,6 @@ pub trait Dec64Nice {
     fn nice(self: Self, round: bool) -> Self;
 }
 
-impl Dec64Nice 
+impl Dec64Nice for Decimal64 {
+    fn abs(self: Self) -> Self {
+        if self.is_negative

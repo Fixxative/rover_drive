@@ -20,4 +20,6 @@ pub trait Dec64Nice {
 
 impl Dec64Nice for Decimal64 {
     fn abs(self: Self) -> Self {
-        if self.is_negative
+        if self.is_negative() { -self } else { self }
+    }
+    fn floor(self: Self) -

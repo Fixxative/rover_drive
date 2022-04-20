@@ -22,4 +22,6 @@ impl Dec64Nice for Decimal64 {
     fn abs(self: Self) -> Self {
         if self.is_negative() { -self } else { self }
     }
-    fn floor(self: Self) -
+    fn floor(self: Self) -> Self {
+        let m = self.coefficient();
+        let e = self.exp

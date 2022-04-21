@@ -24,4 +24,6 @@ impl Dec64Nice for Decimal64 {
     }
     fn floor(self: Self) -> Self {
         let m = self.coefficient();
-        let e = self.exp
+        let e = self.exponent();
+        if e >= 0 { self }
+        else {

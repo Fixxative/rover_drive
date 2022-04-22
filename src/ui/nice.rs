@@ -27,3 +27,5 @@ impl Dec64Nice for Decimal64 {
         let e = self.exponent();
         if e >= 0 { self }
         else {
+            let i: i64 = m / 10i64.pow((-e) as u32);
+            if m >= 0 {

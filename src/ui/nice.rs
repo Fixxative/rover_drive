@@ -29,3 +29,6 @@ impl Dec64Nice for Decimal64 {
         else {
             let i: i64 = m / 10i64.pow((-e) as u32);
             if m >= 0 {
+                Decimal64::from(i as i32)
+            } else {
+ 

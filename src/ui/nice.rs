@@ -31,4 +31,7 @@ impl Dec64Nice for Decimal64 {
             if m >= 0 {
                 Decimal64::from(i as i32)
             } else {
- 
+                Decimal64::from((i-1) as i32)
+            }
+        }
+    

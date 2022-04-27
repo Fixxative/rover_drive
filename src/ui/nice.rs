@@ -36,4 +36,7 @@ impl Dec64Nice for Decimal64 {
         }
     }
     fn ceil(self: Self) -> Self {
-        -(-self).flo
+        -(-self).floor()
+    }
+    fn decomp(self: Self) -> (i32, Self) {
+  

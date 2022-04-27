@@ -34,4 +34,6 @@ impl Dec64Nice for Decimal64 {
                 Decimal64::from((i-1) as i32)
             }
         }
-    
+    }
+    fn ceil(self: Self) -> Self {
+        -(-self).flo

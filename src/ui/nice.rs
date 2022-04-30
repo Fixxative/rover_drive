@@ -39,4 +39,5 @@ impl Dec64Nice for Decimal64 {
         -(-self).floor()
     }
     fn decomp(self: Self) -> (i32, Self) {
-  
+        let mut f: Self = Self::from(self.coefficient() as i32);
+   

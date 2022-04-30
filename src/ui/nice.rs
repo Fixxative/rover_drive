@@ -41,4 +41,6 @@ impl Dec64Nice for Decimal64 {
     fn decomp(self: Self) -> (i32, Self) {
         let mut f: Self = Self::from(self.coefficient() as i32);
         let mut e: i32 = self.exponent();
-        let ten = Self::fro
+        let ten = Self::from(10);
+        let one = Self::from(1);
+        while f.

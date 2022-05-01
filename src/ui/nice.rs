@@ -43,4 +43,7 @@ impl Dec64Nice for Decimal64 {
         let mut e: i32 = self.exponent();
         let ten = Self::from(10);
         let one = Self::from(1);
-        while f.
+        while f.abs() >= ten {
+            f /= ten; e += 1;
+        }
+        while f.abs() <

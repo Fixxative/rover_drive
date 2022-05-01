@@ -46,4 +46,7 @@ impl Dec64Nice for Decimal64 {
         while f.abs() >= ten {
             f /= ten; e += 1;
         }
-        while f.abs() <
+        while f.abs() < one {
+            f *= ten; e -= 1;
+        }
+        (

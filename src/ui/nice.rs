@@ -49,4 +49,6 @@ impl Dec64Nice for Decimal64 {
         while f.abs() < one {
             f *= ten; e -= 1;
         }
-        (
+        (e, f)
+    }
+    fn nice(self: Self, round: bool) -> Se

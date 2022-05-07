@@ -51,4 +51,5 @@ impl Dec64Nice for Decimal64 {
         }
         (e, f)
     }
-    fn nice(self: Self, round: bool) -> Se
+    fn nice(self: Self, round: bool) -> Self {
+        // adapted from: https://github.com/cenfun/nice-ti

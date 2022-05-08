@@ -53,4 +53,5 @@ impl Dec64Nice for Decimal64 {
     }
     fn nice(self: Self, round: bool) -> Self {
         // adapted from: https://github.com/cenfun/nice-ticks/blob/master/src/index.js
-        let (e, 
+        let (e, m) = self.decomp();
+        let (is_neg, m) = if m.is_nega

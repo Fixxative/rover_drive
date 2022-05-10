@@ -56,4 +56,5 @@ impl Dec64Nice for Decimal64 {
         let (e, m) = self.decomp();
         let (is_neg, m) = if m.is_negative() {(true, -m)} else {(false, m)};
         let nm = if round {
-            if m < (Self::from(3)/Self::from(2)) 
+            if m < (Self::from(3)/Self::from(2)) {Self::from(1)}
+            else if m < Self::from(3) {Self

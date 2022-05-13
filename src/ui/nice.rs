@@ -66,4 +66,5 @@ impl Dec64Nice for Decimal64 {
             else if m < Self::from(5)  {Self::from(5)}
             else                       {Self::from(10)}
         };
-        le
+        let out = 
+            if e > 0 { nm * Self::from(10i32.pow(e a

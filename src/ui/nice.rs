@@ -64,4 +64,6 @@ impl Dec64Nice for Decimal64 {
             if      m <= Self::from(1) {Self::from(1)}
             else if m < Self::from(2)  {Self::from(2)}
             else if m < Self::from(5)  {Self::from(5)}
-            els
+            else                       {Self::from(10)}
+        };
+        le

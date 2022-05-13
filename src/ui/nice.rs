@@ -67,4 +67,5 @@ impl Dec64Nice for Decimal64 {
             else                       {Self::from(10)}
         };
         let out = 
-            if e > 0 { nm * Self::from(10i32.pow(e a
+            if e > 0 { nm * Self::from(10i32.pow(e as u32)) }
+            else     { nm / Self::from(10i32.pow((-e) as u32 

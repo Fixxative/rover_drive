@@ -73,4 +73,4 @@ impl Dec64Nice for Decimal64 {
     }
 }
 
-//
+/// Creates nicely rounded min/max from the input

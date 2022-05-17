@@ -74,3 +74,4 @@ impl Dec64Nice for Decimal64 {
 }
 
 /// Creates nicely rounded min/max from the input
+pub fn dec_nice_range(min: Decimal64, max: Decimal64) -> (Decimal6

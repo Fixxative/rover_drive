@@ -80,4 +80,5 @@ pub fn dec_nice_range(min: Decimal64, max: Decimal64) -> (Decimal64, Decimal64)
         if min == max { (min,min+Decimal64::from(1)) } 
         else if min > max { (max, min) }
         else { (min, max) };
-    let r = (max - min).n
+    let r = (max - min).nice(false);
+    let d = r.nice(true) / Decimal64::

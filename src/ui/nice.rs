@@ -77,4 +77,5 @@ impl Dec64Nice for Decimal64 {
 pub fn dec_nice_range(min: Decimal64, max: Decimal64) -> (Decimal64, Decimal64)
 {
     let (min,max) = 
-        if min == max 
+        if min == max { (min,min+Decimal64::from(1)) } 
+        else if min > max { (ma

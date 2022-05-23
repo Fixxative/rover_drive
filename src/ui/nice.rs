@@ -83,4 +83,8 @@ pub fn dec_nice_range(min: Decimal64, max: Decimal64) -> (Decimal64, Decimal64)
     let r = (max - min).nice(false);
     let d = r.nice(true) / Decimal64::from(20);
     let s = (min / d).floor() * d;
-    l
+    let e = (max / d).ceil() * d;
+    (s, e)
+}
+
+/********************

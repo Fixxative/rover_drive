@@ -87,4 +87,4 @@ pub fn dec_nice_range(min: Decimal64, max: Decimal64) -> (Decimal64, Decimal64)
     (s, e)
 }
 
-/********************
+/*********************************************** F64Nice *****************

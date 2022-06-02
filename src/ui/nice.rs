@@ -92,4 +92,6 @@ pub fn dec_nice_range(min: Decimal64, max: Decimal64) -> (Decimal64, Decimal64)
 /// Provides the function `nice` and `compact_str`
 pub trait Nice {
     /// Round to a near 'nice' number
-    fn nice(self: Self, round: bool)
+    fn nice(self: Self, round: bool) -> Self;
+    /// round nth digit
+    fn round_to

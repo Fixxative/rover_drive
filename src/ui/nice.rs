@@ -99,4 +99,5 @@ pub trait Nice {
     fn compact_str(self: Self) -> String;
 }
 
-impl Nice 
+impl Nice for f64 {
+    fn nice(self: Self, round: bool) -> Se

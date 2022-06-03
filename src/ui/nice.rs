@@ -100,4 +100,5 @@ pub trait Nice {
 }
 
 impl Nice for f64 {
-    fn nice(self: Self, round: bool) -> Se
+    fn nice(self: Self, round: bool) -> Self {
+        // adapted from: https://github.com/cenfun

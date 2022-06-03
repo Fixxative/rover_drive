@@ -94,4 +94,5 @@ pub trait Nice {
     /// Round to a near 'nice' number
     fn nice(self: Self, round: bool) -> Self;
     /// round nth digit
-    fn round_to
+    fn round_to(self: Self, n: u32) -> Self;
+    /// Generate a compact string, using the 

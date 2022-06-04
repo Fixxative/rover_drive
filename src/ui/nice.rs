@@ -101,4 +101,5 @@ pub trait Nice {
 
 impl Nice for f64 {
     fn nice(self: Self, round: bool) -> Self {
-        // adapted from: https://github.com/cenfun
+        // adapted from: https://github.com/cenfun/nice-ticks/blob/master/src/index.js
+        if self == 0.0 { return 0

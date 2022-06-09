@@ -104,4 +104,4 @@ impl Nice for f64 {
         // adapted from: https://github.com/cenfun/nice-ticks/blob/master/src/index.js
         if self == 0.0 { return 0.0; }
         let e = self.abs().log10().floor() as i32;
-        let m = if e >=0 { self / (10u64.pow(e as u32
+        let m = if e >=0 { self / (10u64.pow(e as u32) as f64) } else { self * (10u64.pow((-e) as u32) as f64

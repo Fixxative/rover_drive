@@ -111,4 +111,6 @@ impl Nice for f64 {
             else if m < 3.0 {2.0}
             else if m < 7.0 {5.0}
             else            {10.0}
-        } else 
+        } else {
+            if      m <= 1.0 {1.0}
+            else if m <

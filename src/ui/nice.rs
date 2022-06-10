@@ -109,4 +109,6 @@ impl Nice for f64 {
         let nm = if round {
             if m < 1.5 {1.0}
             else if m < 3.0 {2.0}
-            e
+            else if m < 7.0 {5.0}
+            else            {10.0}
+        } else 

@@ -105,4 +105,6 @@ impl Nice for f64 {
         if self == 0.0 { return 0.0; }
         let e = self.abs().log10().floor() as i32;
         let m = if e >=0 { self / (10u64.pow(e as u32) as f64) } else { self * (10u64.pow((-e) as u32) as f64) };
-        let (is_neg, m) = if m < 0.0 {(true, -m)} e
+        let (is_neg, m) = if m < 0.0 {(true, -m)} else {(false, m)};
+        let nm = if round {
+           

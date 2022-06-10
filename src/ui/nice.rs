@@ -115,4 +115,7 @@ impl Nice for f64 {
             if      m <= 1.0 {1.0}
             else if m < 2.0  {2.0}
             else if m < 5.0  {5.0}
-            
+            else             {10.0}
+        };
+        let out = 
+       

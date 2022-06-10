@@ -107,4 +107,6 @@ impl Nice for f64 {
         let m = if e >=0 { self / (10u64.pow(e as u32) as f64) } else { self * (10u64.pow((-e) as u32) as f64) };
         let (is_neg, m) = if m < 0.0 {(true, -m)} else {(false, m)};
         let nm = if round {
-           
+            if m < 1.5 {1.0}
+            else if m < 3.0 {2.0}
+            e

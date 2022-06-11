@@ -122,4 +122,5 @@ impl Nice for f64 {
             else     { nm / (10i32.pow((-e) as u32 ) as f64) };
         if is_neg {-out} else {out}
     }
-    fn round_to(self: S
+    fn round_to(self: Self, n: u32) -> Self {
+        let f = 10u32.pow(n

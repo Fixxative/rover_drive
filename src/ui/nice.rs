@@ -123,4 +123,7 @@ impl Nice for f64 {
         if is_neg {-out} else {out}
     }
     fn round_to(self: Self, n: u32) -> Self {
-        let f = 10u32.pow(n
+        let f = 10u32.pow(n) as Self;
+        (self * f).round() / f
+    }
+  

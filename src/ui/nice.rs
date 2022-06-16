@@ -126,4 +126,5 @@ impl Nice for f64 {
         let f = 10u32.pow(n) as Self;
         (self * f).round() / f
     }
-  
+    fn compact_str(self: Self) -> String {
+        if self == 0.0 { retur

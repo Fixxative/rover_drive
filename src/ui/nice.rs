@@ -127,4 +127,4 @@ impl Nice for f64 {
         (self * f).round() / f
     }
     fn compact_str(self: Self) -> String {
-        if self == 0.0 { retur
+        if self == 0.0 { return String::from("0"); } // or else the log10 might explode

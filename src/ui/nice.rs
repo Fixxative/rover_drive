@@ -128,3 +128,6 @@ impl Nice for f64 {
     }
     fn compact_str(self: Self) -> String {
         if self == 0.0 { return String::from("0"); } // or else the log10 might explode
+        let l = self.abs().log10();
+        if l < -1.0 {
+    

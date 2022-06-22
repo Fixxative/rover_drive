@@ -131,4 +131,5 @@ impl Nice for f64 {
         let l = self.abs().log10();
         if l < -1.0 {
             let n_zeros = -l.ceil();
-            let sign = if self
+            let sign = if self < 0.0 { -1.0 } else { 1.0 };
+            let x = sign*(s

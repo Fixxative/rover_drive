@@ -133,4 +133,5 @@ impl Nice for f64 {
             let n_zeros = -l.ceil();
             let sign = if self < 0.0 { -1.0 } else { 1.0 };
             let x = sign*(self * (10i32.pow(n_zeros as u32) as Self)).round_to(8);
-           
+            let mut s = format!("{}", x);
+            if s.len() > 2 {

@@ -135,4 +135,6 @@ impl Nice for f64 {
             let x = sign*(self * (10i32.pow(n_zeros as u32) as Self)).round_to(8);
             let mut s = format!("{}", x);
             if s.len() > 2 {
-                s.remove(0); s.remove(0); // rem
+                s.remove(0); s.remove(0); // remove "0."
+                if sign == 1.0 {
+              

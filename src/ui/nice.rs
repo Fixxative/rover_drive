@@ -137,4 +137,6 @@ impl Nice for f64 {
             if s.len() > 2 {
                 s.remove(0); s.remove(0); // remove "0."
                 if sign == 1.0 {
-              
+                    format!("{}\\{}", n_zeros, s)
+                } else {
+         

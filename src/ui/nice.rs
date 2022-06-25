@@ -141,4 +141,5 @@ impl Nice for f64 {
                 } else {
                     format!("-{}\\{}", n_zeros, s)
                 }
-         
+            } else {
+                format!("{}", self.round_t

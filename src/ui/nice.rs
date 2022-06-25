@@ -139,4 +139,6 @@ impl Nice for f64 {
                 if sign == 1.0 {
                     format!("{}\\{}", n_zeros, s)
                 } else {
+                    format!("-{}\\{}", n_zeros, s)
+                }
          

@@ -145,4 +145,9 @@ impl Nice for f64 {
                 format!("{}", self.round_to(8))
             }
         } else {
-            format!("{}", self.rou
+            format!("{}", self.round_to(8))
+        }
+    }
+}
+
+/// Creates nicely round

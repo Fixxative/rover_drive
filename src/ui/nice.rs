@@ -142,4 +142,7 @@ impl Nice for f64 {
                     format!("-{}\\{}", n_zeros, s)
                 }
             } else {
-                format!("{}", self.round_t
+                format!("{}", self.round_to(8))
+            }
+        } else {
+            format!("{}", self.rou

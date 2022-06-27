@@ -150,4 +150,5 @@ impl Nice for f64 {
     }
 }
 
-/// Creates nicely round
+/// Creates nicely rounded min/max from the input
+pub fn f64_nice_range(min: f

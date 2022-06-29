@@ -151,4 +151,7 @@ impl Nice for f64 {
 }
 
 /// Creates nicely rounded min/max from the input
-pub fn f64_nice_range(min: f
+pub fn f64_nice_range(min: f64, max: f64) -> (f64, f64)
+{
+    let (min,max) = 
+        if min

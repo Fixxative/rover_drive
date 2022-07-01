@@ -154,4 +154,5 @@ impl Nice for f64 {
 pub fn f64_nice_range(min: f64, max: f64) -> (f64, f64)
 {
     let (min,max) = 
-        if min
+        if min == max { (min,min+1.0) } 
+        else if min > max { (max

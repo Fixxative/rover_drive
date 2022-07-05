@@ -159,4 +159,7 @@ pub fn f64_nice_range(min: f64, max: f64) -> (f64, f64)
         else { (min, max) };
     let r = (max - min).nice(false);
     let d = r.nice(true) / 10.0;
-    let s =
+    let s = (min / d).floor() * d;
+    let e = (max / d).ceil() * d;
+    (s, e)
+}

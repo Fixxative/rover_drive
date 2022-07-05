@@ -157,4 +157,6 @@ pub fn f64_nice_range(min: f64, max: f64) -> (f64, f64)
         if min == max { (min,min+1.0) } 
         else if min > max { (max, min) }
         else { (min, max) };
-    let r = (max - min)
+    let r = (max - min).nice(false);
+    let d = r.nice(true) / 10.0;
+    let s =

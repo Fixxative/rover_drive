@@ -163,3 +163,8 @@ pub fn f64_nice_range(min: f64, max: f64) -> (f64, f64)
     let e = (max / d).ceil() * d;
     (s, e)
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::ui::nice::Nice;
+    #[test]

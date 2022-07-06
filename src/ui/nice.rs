@@ -168,3 +168,5 @@ pub fn f64_nice_range(min: f64, max: f64) -> (f64, f64)
 mod tests {
     use crate::ui::nice::Nice;
     #[test]
+    fn rounding() -> Result<(), Box<dyn std::error::Error>> {
+        

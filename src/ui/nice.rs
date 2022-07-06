@@ -174,4 +174,8 @@ mod tests {
                                     // add more here
                                     ].iter() {
             let f: f64 = f_str.parse()?;
-            assert_eq!(f.compact_str(), *compact_str
+            assert_eq!(f.compact_str(), *compact_str);    
+        }
+        Ok(())
+    }
+}

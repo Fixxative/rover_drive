@@ -171,4 +171,5 @@ mod tests {
     fn rounding() -> Result<(), Box<dyn std::error::Error>> {
         for (f_str, compact_str) in [ ("0.0657", "1\\657")
                                     , ("0.0648", "1\\648")
-                        
+                                    // add more here
+                                 

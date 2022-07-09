@@ -86,3 +86,28 @@ impl<'a> Widget for PriceTable<'a> {
                     if let Some(mkt) = self.markets.get(&symbol) {
                         if self.show_percent {
                             let percentage = mkt.percentage_string();
+                            let perc_len = percentage.len() as u16;
+                            if x+perc_len < area.width {
+                                let percentage_span = Span::styled(percentage, mkt.style_percent());
+                                let spans = Spans::from(vec![percentage_span]);
+                                buf.set_spans(x, y as u16+1, &spans, perc_len);
+                            }
+                        } else {
+                            let price = mkt.price_string();
+                            let price_len = price.len() as u16;
+                            if x+price_len < area.width {
+                                let price_span = Span::styled(price, mkt.style());
+                                let spans = Spans::from(vec![price_span]);
+                                buf.set_spans(x, y as u16+1, &spans, price_len);
+                            }
+                        }
+                    }
+                }
+                x += col_width+2;
+                if x >= area.width { break; }
+            }
+            x += 3;
+            if x >= area.width { break; }
+        }
+    }
+}

@@ -12,4 +12,5 @@ use tui::{
 
 
 /// Widget Search
-pub
+pub struct Search<'a> {
+    symbol_width: usize,    // 

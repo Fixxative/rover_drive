@@ -6,4 +6,10 @@ use tui::{
     style::{Style, Color, Modifier},
     widgets::{Widget},
     layout::{Rect},
-  
+    text::{Span, Spans},
+    buffer::{Buffer}
+};
+
+
+/// Widget Search
+pub

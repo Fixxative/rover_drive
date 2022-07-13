@@ -13,4 +13,6 @@ use tui::{
 
 /// Widget Search
 pub struct Search<'a> {
-    symbol_width: usize,    // 
+    symbol_width: usize,    // width of longest symbol in info
+    infos: &'a Vec<Info>,
+    pub ref

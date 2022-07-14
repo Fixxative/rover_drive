@@ -15,4 +15,5 @@ use tui::{
 pub struct Search<'a> {
     symbol_width: usize,    // width of longest symbol in info
     infos: &'a Vec<Info>,
-    pub ref_i_symbol: Rc<RefCell<usize>>,    // index of selected symb
+    pub ref_i_symbol: Rc<RefCell<usize>>,    // index of selected symbol in infos (interior mutablity via Rc<RefCell<_>>)
+    pu

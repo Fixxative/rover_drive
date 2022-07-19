@@ -20,4 +20,4 @@ pub struct Search<'a> {
 }
 
 impl<'a> Search<'a> {
-    pub fn 
+    pub fn new(infos: &'a Vec<Info>, ref_i_symbol: Rc<RefCell<usiz

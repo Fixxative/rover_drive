@@ -16,4 +16,4 @@ pub struct Search<'a> {
     symbol_width: usize,    // width of longest symbol in info
     infos: &'a Vec<Info>,
     pub ref_i_symbol: Rc<RefCell<usize>>,    // index of selected symbol in infos (interior mutablity via Rc<RefCell<_>>)
-    pub ref_cursor: Rc<RefCell<(u16, u16)>>,    // cursor 
+    pub ref_cursor: Rc<RefCell<(u16, u16)>>,    // cursor position ix and iy (interior mutablity via

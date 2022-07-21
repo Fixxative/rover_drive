@@ -20,4 +20,5 @@ pub struct Search<'a> {
 }
 
 impl<'a> Search<'a> {
-    pub fn new(infos: &'a Vec<Info>, ref_i_symbol: Rc<RefCell<usiz
+    pub fn new(infos: &'a Vec<Info>, ref_i_symbol: Rc<RefCell<usize>>, 
+               ref_cursor: Rc<RefCell<(u16,u16)>

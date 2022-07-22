@@ -21,4 +21,5 @@ pub struct Search<'a> {
 
 impl<'a> Search<'a> {
     pub fn new(infos: &'a Vec<Info>, ref_i_symbol: Rc<RefCell<usize>>, 
-               ref_cursor: Rc<RefCell<(u16,u16)>
+               ref_cursor: Rc<RefCell<(u16,u16)>>) -> Search<'a> {
+        let width = infos.iter().map(|info| info

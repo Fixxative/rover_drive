@@ -26,3 +26,5 @@ impl<'a> Search<'a> {
         Search { 
             symbol_width: width,
             infos: infos,
+            ref_i_symbol: ref_i_symbol,
+            ref_cursor: r

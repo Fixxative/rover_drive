@@ -27,4 +27,10 @@ impl<'a> Search<'a> {
             symbol_width: width,
             infos: infos,
             ref_i_symbol: ref_i_symbol,
-            ref_cursor: r
+            ref_cursor: ref_cursor,
+        }
+    }
+}
+
+impl<'a> Widget for Search<'a> {
+    fn 

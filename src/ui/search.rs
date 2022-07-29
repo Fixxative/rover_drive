@@ -33,4 +33,5 @@ impl<'a> Search<'a> {
 }
 
 impl<'a> Widget for Search<'a> {
-    fn 
+    fn render(self: Self, area: Rect, buf: &mut Buffer) {
+    

@@ -36,4 +36,5 @@ impl<'a> Widget for Search<'a> {
     fn render(self: Self, area: Rect, buf: &mut Buffer) {
         let mut x: u16 = 0;   // x position in area
         let mut y: u16 = 0;   // y position in area
-        let mut ix: u16 = 0;  /
+        let mut ix: u16 = 0;  // x position in table of symbols
+        let m

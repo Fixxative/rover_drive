@@ -37,4 +37,5 @@ impl<'a> Widget for Search<'a> {
         let mut x: u16 = 0;   // x position in area
         let mut y: u16 = 0;   // y position in area
         let mut ix: u16 = 0;  // x position in table of symbols
-        let mut iy: u16 = 0;  // y position in table of symbols (always same as variable
+        let mut iy: u16 = 0;  // y position in table of symbols (always same as variable `y`, actually)
+        let mut cursor: RefMut<(u16, u

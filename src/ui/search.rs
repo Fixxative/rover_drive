@@ -39,4 +39,6 @@ impl<'a> Widget for Search<'a> {
         let mut ix: u16 = 0;  // x position in table of symbols
         let mut iy: u16 = 0;  // y position in table of symbols (always same as variable `y`, actually)
         let mut cursor: RefMut<(u16, u16)> = self.ref_cursor.borrow_mut();
-        let height 
+        let height = area.height as u16;
+        let width = area.width as u16;
+        let s

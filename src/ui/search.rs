@@ -41,4 +41,5 @@ impl<'a> Widget for Search<'a> {
         let mut cursor: RefMut<(u16, u16)> = self.ref_cursor.borrow_mut();
         let height = area.height as u16;
         let width = area.width as u16;
-        let s
+        let symbol_width = self.symbol_width as u16;
+        for (

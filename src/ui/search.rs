@@ -42,4 +42,5 @@ impl<'a> Widget for Search<'a> {
         let height = area.height as u16;
         let width = area.width as u16;
         let symbol_width = self.symbol_width as u16;
-        for (
+        for (i_symbol, info) in self.infos.iter().enumerate() {
+            if y 

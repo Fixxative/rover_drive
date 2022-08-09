@@ -51,4 +51,5 @@ impl<'a> Widget for Search<'a> {
                 iy = 0;
             }
             let style: tui::style::Style = if ix==cursor.0 && iy==cursor.1 {
-            
+                *self.ref_i_symbol.borrow_mut() = i_symbol;
+               

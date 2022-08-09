@@ -45,4 +45,6 @@ impl<'a> Widget for Search<'a> {
         for (i_symbol, info) in self.infos.iter().enumerate() {
             if y >= height { 
                 x += symbol_width + 1; 
-           
+                if x >= width { break; }
+                y = 0; 
+              

@@ -52,4 +52,6 @@ impl<'a> Widget for Search<'a> {
             }
             let style: tui::style::Style = if ix==cursor.0 && iy==cursor.1 {
                 *self.ref_i_symbol.borrow_mut() = i_symbol;
-                Style::default().fg(Color::Red).add_modifier(Modifier::BOLD).add
+                Style::default().fg(Color::Red).add_modifier(Modifier::BOLD).add_modifier(Modifier::ITALIC)
+            } else {
+                Style::de

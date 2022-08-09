@@ -50,4 +50,5 @@ impl<'a> Widget for Search<'a> {
                 ix += 1;
                 iy = 0;
             }
-            let sty
+            let style: tui::style::Style = if ix==cursor.0 && iy==cursor.1 {
+            

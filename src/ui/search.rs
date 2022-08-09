@@ -47,4 +47,7 @@ impl<'a> Widget for Search<'a> {
                 x += symbol_width + 1; 
                 if x >= width { break; }
                 y = 0; 
-              
+                ix += 1;
+                iy = 0;
+            }
+            let sty

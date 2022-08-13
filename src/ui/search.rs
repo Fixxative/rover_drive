@@ -62,4 +62,4 @@ impl<'a> Widget for Search<'a> {
             y += 1;
             iy += 1;
         }
-        if cursor.0 > ix {    // d
+        if cursor.0 > ix {    // don't allow increasing cursor's ix beyond ix at end of fo

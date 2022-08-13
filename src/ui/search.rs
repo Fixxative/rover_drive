@@ -54,4 +54,6 @@ impl<'a> Widget for Search<'a> {
                 *self.ref_i_symbol.borrow_mut() = i_symbol;
                 Style::default().fg(Color::Red).add_modifier(Modifier::BOLD).add_modifier(Modifier::ITALIC)
             } else {
-                Style::de
+                Style::default()
+            };
+            let span = Span::styled(

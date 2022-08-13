@@ -57,4 +57,5 @@ impl<'a> Widget for Search<'a> {
                 Style::default()
             };
             let span = Span::styled(format!("{}", info.symbol), style);
-            let spans = S
+            let spans = Spans::from(vec![span]);
+            buf.set_spans(x, y as u16,

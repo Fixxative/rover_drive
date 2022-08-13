@@ -56,4 +56,5 @@ impl<'a> Widget for Search<'a> {
             } else {
                 Style::default()
             };
-            let span = Span::styled(
+            let span = Span::styled(format!("{}", info.symbol), style);
+            let spans = S

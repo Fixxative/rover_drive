@@ -67,4 +67,6 @@ impl<'a> Widget for Search<'a> {
         }
         if cursor.1 >= height {    // don't allow increasing cursor's iy beyond height
             cursor.1 = height - 1;
-     
+        }
+    }
+}

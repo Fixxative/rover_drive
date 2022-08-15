@@ -65,4 +65,6 @@ impl<'a> Widget for Search<'a> {
         if cursor.0 > ix {    // don't allow increasing cursor's ix beyond ix at end of for loop
             cursor.0 = ix;
         }
-        if cursor.1 >= height {    // don't allow increasing cursor's i
+        if cursor.1 >= height {    // don't allow increasing cursor's iy beyond height
+            cursor.1 = height - 1;
+     

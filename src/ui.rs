@@ -103,3 +103,63 @@ pub enum Msg {
     Infos(Vec<Info>),   // Downloaded infos for each symbol
     Msg(String),        // info message to UI
     PriceList,          // On 'l' key press show PriceList
+    PriceTable,         // On 't' key press show PriceTable
+    Graph(Option<u32>), // On 'g' display graph with given time scale, or stored time scale if Nothing
+    TogglePercent,      // On '%' key press
+    ToggleExtended,     // On 'x' key press
+    Search,             // On 's' show the search widget
+    ArrowUp,            // On arrow up
+    ArrowDown,          // On arrow down
+    ArrowLeft,          // On srrow left
+    ArrowRight,         // On arrow right
+    Home,               // Home Home key reset cursor to top left
+    Enter,              // On pressing enter
+    Help,               // On 'h' key press show help
+    About,              // On 'a' key press show about page
+    Esc,                // On ESC go back to previous page
+    Stop                // stop ui
+}
+
+/// Just tui::Terminal<...>
+type Term = tui::Terminal<tui::backend::TermionBackend<termion::raw::RawTerminal<std::io::Stdout>>>;
+
+/// All the different pages
+#[derive(Debug, Clone, PartialEq, PartialOrd)]
+enum UIView {
+    PriceList,  // display PriceList
+    PriceTable, // display PriceTable
+    Graph,      // display graph
+    Search,     // display search widget
+    Empty,      // display PriceTable
+    Help,       // display help
+    About,      // display help
+}
+
+impl Copy for UIView { }
+
+
+/// Current state of the `UI`
+pub struct UIState {
+    message: String,
+    markets: HashMap<Symbol, MarketState>,
+    latency: u64,
+    ui_mode: UIView,
+    ui_mode_back: Option<UIView>,       // where to go back to if ESC is pressed
+    show_percent: bool,                 // 
+    extended: bool,                     // extended view of table page
+    ts_last_update: u64,                // ts of last market update
+    lookup: Option<HashMap<Symbol, Info>>,
+    infos: Option<Vec<Info>>,
+    klines: Option<Vec<Bar>>,
+    symbol: Symbol,
+    time_scale: u32,                    // time scale for graph
+    cursor_ix: u16,                     // x position of symbol in search widget
+    cursor_iy: u16,                     // y position of symbol in search widget
+}
+
+impl UIState {
+    /// New `UIState` with empty fields, 0 latency, ui_mode `PriceList`
+    fn new() -> Self {
+        UIState { 
+            message: String::new(), 
+            markets: HashMap::new(),

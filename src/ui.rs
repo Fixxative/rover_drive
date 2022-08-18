@@ -163,3 +163,68 @@ impl UIState {
         UIState { 
             message: String::new(), 
             markets: HashMap::new(),
+            latency: 0,
+            ui_mode: UIView::Empty,
+            ui_mode_back: None,
+            show_percent: false,
+            extended: true,
+            ts_last_update: 0,
+            lookup: None,
+            infos: None,
+            klines: None,
+            symbol: InlineString::from("BTCUSDT"),
+            time_scale: 0,
+            cursor_ix: 0,
+            cursor_iy: 0,
+        }
+    }
+    fn update(self: &mut Self, updates: &Vec<Update>) {
+        if let Some(lookup) = &self.lookup {
+            for u in updates {
+                if u.ts > self.ts_last_update { self.ts_last_update = u.ts; }
+                let info = lookup.get(&u.symbol);
+                if let Some(_) = info {
+                    self.markets.entry(u.symbol.clone()).or_insert(MarketState::new()).update(&u);
+                }
+            }
+        }
+    }
+}
+/// Encapsulates the `UI`
+pub struct UI {
+    pub tx: UnboundedSender<Msg>,
+    pub handle: tokio::task::JoinHandle<()>,
+}
+
+impl UI {
+    /// Create new `UI`
+    pub fn new(mut terminal: Term) -> Self {
+        terminal.clear().expect("Terminal failed!");
+        let (tx, mut rx) = unbounded_channel();
+        let handle = tokio::spawn( async move {
+            let mut state = UIState::new();
+            let mut buf: Vec<Update> = Vec::with_capacity(2000);    // buffer for parse_updates
+            let mut cursor_moved: bool = false;                     // used for setting message after draw is done
+            while let Some(msg) = rx.recv().await {
+                match msg {
+                    Msg::Infos(infos_) => {
+                        state.infos = Some(infos_.iter().cloned().filter(|i| i.quote != "TUSD" && i.quote != "BUSD" && i.quote != "USDC").collect());
+                        state.lookup = Some(infos_to_lookup(&infos_));
+                        state.ui_mode = UIView::PriceList;
+                    },
+                    Msg::WS(ts_rec, msg) => {
+                        if let Ok(us) = parse_updates(&msg, &mut buf) {
+                            state.update(&us);
+                        } else if let Ok(ts) = msg.parse::<u64>() {
+                            state.latency = ts_rec-ts;
+                        } else {
+                            state.message = format!("{:?}", msg);
+                            break;
+                        }
+                    },
+                    Msg::Msg(msg) => {
+                        state.message = msg;
+                    },
+                    Msg::PriceList => {
+                        state.ui_mode = UIView::PriceList;
+                        state.message = String::from("Show price list");

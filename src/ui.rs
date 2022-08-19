@@ -336,3 +336,58 @@ impl UI {
             6 => Interval::I4h,
             7 => Interval::I8h,
             8 => Interval::I12h,
+            9 => Interval::I1d,
+            _ => Interval::I1m,
+        };
+        state.message = format!("Getting {} klines for {}", interval.str(), state.symbol);
+        UI::draw(&mut state, &mut terminal);
+        match get_klines(&state.symbol, &interval).await {
+            Ok(klines) => {
+                state.ui_mode = UIView::Graph;
+                state.message = format!("Show {} klines for {}", interval.str(), state.symbol);
+                state.klines = Some(klines);
+            },
+            Err(e) => {
+                state.message = format!("Failed to get klines: {:?}", e);
+            }
+        }
+    }
+    /// Draw `UI`
+    fn draw(state: &mut UIState, terminal: &mut Term) {
+        terminal.draw(|f| {
+            let size = f.size();
+            let chunks = Layout::default()
+                .direction(Direction::Vertical)
+                .margin(0)
+                .constraints(
+                    [
+                        Constraint::Min(0),
+                        Constraint::Length(1),
+                    ].as_ref()
+                )
+                .split(size);
+            match state.ui_mode {
+                UIView::PriceList => {
+                    if let Some(infos) = &state.infos {
+                        let price_list = price_list::PriceList::new(&infos, &state.markets, state.show_percent);
+                        f.render_widget(price_list, chunks[0]);
+                    }
+                },
+                UIView::PriceTable => {
+                    if let Some(infos) = &state.infos {
+                        let price_table = price_table::PriceTable::new(&infos, &state.markets, state.show_percent, state.extended);
+                        f.render_widget(price_table, chunks[0]);
+                    }
+                },
+                UIView::Graph => {
+                    if let Some(infos) = &mut state.infos {
+                        if let Some(klines) = &state.klines {
+                            let graph = graph::Graph::new(&infos, klines, Interval::I1m, state.symbol.clone());
+                            f.render_widget(graph, chunks[0]);
+                        }
+                    }
+                },
+                UIView::Search => {
+                    // The `Search` object needs to be able to modify i_symbol and cursor (ix, iy), so
+                    // we use interior mutability via Rc<RefCell<...>>.
+                    // - i_symbol is the index of the selected symbol

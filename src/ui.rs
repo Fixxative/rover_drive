@@ -284,3 +284,55 @@ impl UI {
                             state.ui_mode = UIView::Graph;
                             UI::graph(&mut state, &mut terminal).await;
                         }
+                    },
+                    Msg::TogglePercent => {
+                        state.show_percent = !state.show_percent;
+                        if state.show_percent { state.message = String::from("Show %"); }
+                        else { state.message = String::from("Show prices"); }
+                    },
+                    Msg::ToggleExtended => {
+                        state.extended = !state.extended;
+                        if state.extended { state.message = String::from("Show extended"); }
+                        else { state.message = String::from("Show reduced"); }
+                    },
+                    Msg::Help => {
+                        state.ui_mode_back = Some(state.ui_mode);
+                        state.ui_mode = UIView::Help;
+                        state.message = String::from("Help");
+                    },
+                    Msg::About => {
+                        state.ui_mode_back = Some(state.ui_mode);
+                        state.ui_mode = UIView::About;
+                        state.message = String::from("About");
+                    },
+                    Msg::Esc => {
+                        state.ui_mode = state.ui_mode_back.unwrap_or(UIView::PriceList);
+                        state.ui_mode_back = None;
+                        state.message.clear();
+                    },
+                    Msg::Stop => { 
+                        state.message = String::from("Stop");
+                        UI::draw(&mut state, &mut terminal);
+                        return; 
+                    }
+                }
+                UI::draw(&mut state, &mut terminal); 
+                if cursor_moved {
+                    state.message = format!("SEL {}", state.symbol);
+                    cursor_moved = false;
+                }
+            }
+        });
+        UI { tx: tx, handle: handle }
+    }
+    /// Draw Graph
+    pub async fn graph(mut state: &mut UIState, mut terminal: &mut Term) {
+        let interval: Interval = match state.time_scale {
+            1 => Interval::I5m,
+            2 => Interval::I15m,
+            3 => Interval::I30m,
+            4 => Interval::I1h,
+            5 => Interval::I2h,
+            6 => Interval::I4h,
+            7 => Interval::I8h,
+            8 => Interval::I12h,

@@ -228,3 +228,59 @@ impl UI {
                     Msg::PriceList => {
                         state.ui_mode = UIView::PriceList;
                         state.message = String::from("Show price list");
+                    },
+                    Msg::PriceTable => {
+                        state.ui_mode = UIView::PriceTable;
+                        state.message = String::from("Show price table");
+                    },
+                    Msg::Graph(scale) => {
+                        state.time_scale = scale.unwrap_or(state.time_scale);
+                        UI::graph(&mut state, &mut terminal).await;
+                    },
+                    Msg::Search => {
+                        state.ui_mode_back = Some(state.ui_mode);
+                        state.ui_mode = UIView::Search;
+                        state.message = String::from("Select symbol");
+                    },
+                    Msg::ArrowUp => {
+                        if state.ui_mode == UIView::Search {
+                            if state.cursor_iy > 0 { 
+                                state.cursor_iy -= 1;
+                                cursor_moved = true;
+                            }
+                        }
+                    },
+                    Msg::ArrowDown => {
+                        if state.ui_mode == UIView::Search {
+                            state.cursor_iy += 1;   // ! height needs to be checked elsewhere!
+                            cursor_moved = true;
+                        }
+                    },
+                    Msg::ArrowLeft => {
+                        if state.ui_mode == UIView::Search {
+                            if state.cursor_ix > 0 { 
+                                state.cursor_ix -= 1;
+                                cursor_moved = true;
+                            }
+                        }
+                    },
+                    Msg::ArrowRight => {
+                        if state.ui_mode == UIView::Search {
+                            state.cursor_ix += 1;   // ! width needs to be checked elsewhere!
+                            cursor_moved = true;
+                        }
+                    },
+                    Msg::Home => {
+                        if state.ui_mode == UIView::Search {
+                            state.cursor_ix = 0;
+                            state.cursor_iy = 0;
+                            cursor_moved = true;
+                        }
+                    },
+                    Msg::Enter => {
+                        if state.ui_mode == UIView::Search {
+                            state.message = format!("Graph {}", state.symbol);
+                            state.ui_mode_back = Some(state.ui_mode);
+                            state.ui_mode = UIView::Graph;
+                            UI::graph(&mut state, &mut terminal).await;
+                        }

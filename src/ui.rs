@@ -391,3 +391,57 @@ impl UI {
                     // The `Search` object needs to be able to modify i_symbol and cursor (ix, iy), so
                     // we use interior mutability via Rc<RefCell<...>>.
                     // - i_symbol is the index of the selected symbol
+                    // - cursor is unchanged unless the display bounds are be exceeded
+                    if let Some(infos) = &state.infos {
+                        let ref_i_symbol = Rc::new(RefCell::new(0));
+                        let ref_cursor = Rc::new(RefCell::new((state.cursor_ix,state.cursor_iy)));
+                        let search = search::Search::new(infos, ref_i_symbol.clone(), ref_cursor.clone());
+                        f.render_widget(search, chunks[0]);
+                        // Now stick cursor (ix, iy) back into state
+                        let (ix, iy) = (*ref_cursor).take();
+                        state.cursor_ix = ix; state.cursor_iy = iy;
+                        // Finally adjust state.symbol if necessary
+                        if let Some(infos) = &state.infos {
+                            let i_symbol: usize = (*ref_i_symbol).take();
+                            if i_symbol < infos.len() { // check bounds just in case
+                                let symbol = &infos[i_symbol].symbol;
+                                state.symbol = symbol.clone();
+                            }
+                        }
+                    }
+                },
+                UIView::Empty => {
+                    // draw splash screen
+                    about::draw_about(f, chunks[0]);
+                }
+                UIView::Help => {
+                    f.render_widget(help::help(), chunks[0]);
+                },
+                UIView::About => {
+                    about::draw_about(f, chunks[0]);
+                }
+            }
+            UI::draw_message_bar(f, state, chunks[1]);
+        }).expect("Failed to draw!");
+    }
+    /// Draw the message bar at the bottom
+    fn draw_message_bar<B: Backend>(f: &mut Frame<B>, state: &UIState, area: Rect) {
+        // layout horizontally into three pieces:
+        // - current time
+        // - state.message
+        // - latency (floating right)
+        let chunks = Layout::default()
+            .direction(Direction::Horizontal)
+            .constraints(
+                [ Constraint::Length(13)    // 13 chars in "| HH:MM:SS | "
+                , Constraint::Min(0)
+                , Constraint::Length(9)     // enough for 99999ms
+                ].as_ref()
+            )
+            .split(area);
+        let now = Local::now();
+        let now_span = Spans::from(vec![
+            Span::from("| "),
+            Span::styled(format!("{}", now.format("%H:%M:%S")), Style::default().add_modifier(Modifier::ITALIC)),
+            Span::from(" | ")
+        ]);

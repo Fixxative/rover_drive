@@ -445,3 +445,21 @@ impl UI {
             Span::styled(format!("{}", now.format("%H:%M:%S")), Style::default().add_modifier(Modifier::ITALIC)),
             Span::from(" | ")
         ]);
+        let msg_span = Span::from(state.message.as_str());
+        let lat_span = if state.ts_last_update != 0 {
+            let delta = now.timestamp_millis() as u64-state.ts_last_update;
+            let s = format!("{}ms", delta);
+            let style = Style::default().fg(
+                if      delta < 5000  { Color::Green  }
+                else if delta < 15000 { Color::Yellow }
+                else                  { Color::Red    }
+            );
+            Span::styled(s, style)
+        } else {
+            Span::styled("- ms", Style::default().fg(Color::Gray))
+        };
+        f.render_widget(Paragraph::new(now_span), chunks[0]);
+        f.render_widget(Paragraph::new(msg_span), chunks[1]);
+        f.render_widget(Paragraph::new(lat_span).alignment(Alignment::Right), chunks[2]);
+    }
+}

@@ -13,4 +13,5 @@ use inlinable_string::{InlineString};
 /// Parse a String into a `Decimal64`, chop off superfluous zeros
 // todo: Make this return Result
 pub fn parse_dec(s: &String) -> Decimal64 {
-    if let Some(_) =
+    if let Some(_) = s.find(".") {
+        s.trim_end_matches("0").pars

@@ -10,4 +10,6 @@ use std::time::{SystemTime, UNIX_EPOCH};
 use dec::Decimal64;
 use inlinable_string::{InlineString};
 
-/// Parse a String into a `Decimal64`, ch
+/// Parse a String into a `Decimal64`, chop off superfluous zeros
+// todo: Make this return Result
+pub fn pa

@@ -16,4 +16,8 @@ pub fn parse_dec(s: &String) -> Decimal64 {
     if let Some(_) = s.find(".") {
         s.trim_end_matches("0").parse().expect("parse_dec: Couldn't parse!")
     } else {
-        s.parse()
+        s.parse().expect("parse_dec: Couldn't parse!")
+    }
+}
+
+/// Nicely forma

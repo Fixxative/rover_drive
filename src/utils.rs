@@ -24,3 +24,5 @@ pub fn parse_dec(s: &String) -> Decimal64 {
 // todo: move this into `Nice`
 pub fn fmt_dec(d: Decimal64) -> String {
     if d.is_infinite() {
+        String::from("-")
+    } else if d.is_nan() || d.is

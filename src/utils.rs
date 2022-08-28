@@ -25,4 +25,7 @@ pub fn parse_dec(s: &String) -> Decimal64 {
 pub fn fmt_dec(d: Decimal64) -> String {
     if d.is_infinite() {
         String::from("-")
-    } else if d.is_nan() || d.is
+    } else if d.is_nan() || d.is_signaling_nan() {
+        String::from("-")
+    } else {
+        

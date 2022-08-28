@@ -28,4 +28,5 @@ pub fn fmt_dec(d: Decimal64) -> String {
     } else if d.is_nan() || d.is_signaling_nan() {
         String::from("-")
     } else {
-        
+        let mut u = d.coefficient();
+        let mut e 

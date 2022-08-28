@@ -29,4 +29,5 @@ pub fn fmt_dec(d: Decimal64) -> String {
         String::from("-")
     } else {
         let mut u = d.coefficient();
-        let mut e 
+        let mut e = d.exponent();
+        let mut di = d.digits() as i32

@@ -22,4 +22,5 @@ pub fn parse_dec(s: &String) -> Decimal64 {
 
 /// Nicely format a `Decimal64`
 // todo: move this into `Nice`
-pub fn fmt_dec(d: Deci
+pub fn fmt_dec(d: Decimal64) -> String {
+    if d.is_infinite() {

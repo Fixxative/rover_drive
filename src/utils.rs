@@ -36,4 +36,5 @@ pub fn fmt_dec(d: Decimal64) -> String {
             e += 1;
             di -= 1;
         }
- 
+        if e+di < 0 { // slash notation
+        

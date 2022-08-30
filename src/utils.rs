@@ -32,4 +32,8 @@ pub fn fmt_dec(d: Decimal64) -> String {
         let mut e = d.exponent();
         let mut di = d.digits() as i32;
         while (u/10)*10 == u && u!=0 {
-            u /= 1
+            u /= 10;
+            e += 1;
+            di -= 1;
+        }
+ 

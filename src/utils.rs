@@ -37,4 +37,7 @@ pub fn fmt_dec(d: Decimal64) -> String {
             di -= 1;
         }
         if e+di < 0 { // slash notation
-        
+            format!("{}\\{}", -di-e+1, u)
+        } else {
+            format!("{}", d)
+ 

@@ -45,4 +45,6 @@ pub fn fmt_dec(d: Decimal64) -> String {
 }
 
 /// String type for symbol
-pub type S
+pub type Symbol = InlineString;
+
+/// `Info` contains symbol, 

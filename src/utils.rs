@@ -40,4 +40,9 @@ pub fn fmt_dec(d: Decimal64) -> String {
             format!("{}\\{}", -di-e+1, u)
         } else {
             format!("{}", d)
- 
+        }
+    }
+}
+
+/// String type for symbol
+pub type S

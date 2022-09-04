@@ -47,4 +47,6 @@ pub fn fmt_dec(d: Decimal64) -> String {
 /// String type for symbol
 pub type Symbol = InlineString;
 
-/// `Info` contains symbol, 
+/// `Info` contains symbol, base, quote and precision
+#[derive(Debug, Clone)]
+pub

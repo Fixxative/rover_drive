@@ -49,4 +49,6 @@ pub type Symbol = InlineString;
 
 /// `Info` contains symbol, base, quote and precision
 #[derive(Debug, Clone)]
-pub
+pub struct Info {
+    pub symbol: Symbol,
+    pub b

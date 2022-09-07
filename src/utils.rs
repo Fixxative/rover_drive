@@ -51,4 +51,6 @@ pub type Symbol = InlineString;
 #[derive(Debug, Clone)]
 pub struct Info {
     pub symbol: Symbol,
-    pub b
+    pub base: Symbol,
+    pub quote: Symbol,
+    pub volume: Deci

@@ -59,4 +59,8 @@ pub struct Info {
 impl Info {
     pub fn short_symbol(self: &Self) -> &InlineString {
         if self.quote == "USDT" { &self.base }
-        else    
+        else                { &self.symbol }
+    }
+}
+
+/// Subset of d

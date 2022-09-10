@@ -69,4 +69,5 @@ struct MarketInfo {
     symbols: Vec<MarketInfoSymbol>
 }
 
-/// Subset of data returned by 
+/// Subset of data returned by api/v3/exchangeInfo, for deserialisation only
+#[derive(De

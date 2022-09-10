@@ -53,4 +53,8 @@ pub struct Info {
     pub symbol: Symbol,
     pub base: Symbol,
     pub quote: Symbol,
-    pub volume: Deci
+    pub volume: Decimal64,
+}
+
+impl Info {
+    pub fn short_symbol(self: &Self) -> &Inli

@@ -63,4 +63,5 @@ impl Info {
     }
 }
 
-/// Subset of d
+/// Subset of data returned by api/v3/exchangeInfo, for deserialisation only
+#[derive(Debug,

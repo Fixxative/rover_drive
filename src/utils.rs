@@ -70,4 +70,6 @@ struct MarketInfo {
 }
 
 /// Subset of data returned by api/v3/exchangeInfo, for deserialisation only
-#[derive(De
+#[derive(Debug, Clone, Deserialize)]
+#[serde(rename_all = "camelCase")]
+str

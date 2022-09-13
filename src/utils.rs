@@ -81,4 +81,5 @@ struct MarketInfoSymbol {
 }
 
 /// Get all traded binance symbols (unsorted)
-fn _get_infos() -
+fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
+    let m

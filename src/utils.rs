@@ -74,4 +74,10 @@ struct MarketInfo {
 #[serde(rename_all = "camelCase")]
 struct MarketInfoSymbol {
     symbol: String,
-    status: Strin
+    status: String,
+    base_asset: String,
+    quote_asset: String
+
+}
+
+/// 

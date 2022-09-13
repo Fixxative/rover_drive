@@ -80,4 +80,5 @@ struct MarketInfoSymbol {
 
 }
 
-/// 
+/// Get all traded binance symbols (unsorted)
+fn _get_infos() -

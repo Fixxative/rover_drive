@@ -82,4 +82,4 @@ struct MarketInfoSymbol {
 
 /// Get all traded binance symbols (unsorted)
 fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
-    let m
+    let mut writer = Vec::with_capacity(3000000);   // excha

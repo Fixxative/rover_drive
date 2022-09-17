@@ -83,4 +83,4 @@ struct MarketInfoSymbol {
 /// Get all traded binance symbols (unsorted)
 fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
     let mut writer = Vec::with_capacity(3000000);   // exchangeInfo size is <2MB usually
-    if !request::get("https://api
+    if !request::get("https://api.binance.com/api/v3/exchangeInfo", &mut writer)?.status_code().is_

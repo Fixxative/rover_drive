@@ -91,4 +91,5 @@ fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
     let mut out = HashMap::<Symbol, Info>::new();
     for sym in market_info.symbols.iter() {
         if sym.status == "TRADING" {
-            let symbol = InlineString::f
+            let symbol = InlineString::from(sym.symbol.as_str());
+            let base = InlineString::from

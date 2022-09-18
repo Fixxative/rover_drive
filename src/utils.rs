@@ -86,4 +86,5 @@ fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
     if !request::get("https://api.binance.com/api/v3/exchangeInfo", &mut writer)?.status_code().is_success() {
         return Err(Box::new(std::io::Error::new(std::io::ErrorKind::Other, "Req api/v3/exchangeInfo failed")));
     }
-    let cow = String::from_utf8_lossy(
+    let cow = String::from_utf8_lossy(&writer);
+    let market_info: MarketInfo = serde_json::from_str

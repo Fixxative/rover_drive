@@ -90,4 +90,5 @@ fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
     let market_info: MarketInfo = serde_json::from_str(cow.deref())?;
     let mut out = HashMap::<Symbol, Info>::new();
     for sym in market_info.symbols.iter() {
-        
+        if sym.status == "TRADING" {
+            let symbol = InlineString::f

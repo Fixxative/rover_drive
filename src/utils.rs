@@ -84,4 +84,4 @@ struct MarketInfoSymbol {
 fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
     let mut writer = Vec::with_capacity(3000000);   // exchangeInfo size is <2MB usually
     if !request::get("https://api.binance.com/api/v3/exchangeInfo", &mut writer)?.status_code().is_success() {
-        return Err(Box::new(std::io::Error::new(std
+        return Err(Box::new(std::io::Error::new(std::io::ErrorKind::Other, "Req api/v3/exchangeInfo f

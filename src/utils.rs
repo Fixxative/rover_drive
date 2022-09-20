@@ -93,4 +93,5 @@ fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
         if sym.status == "TRADING" {
             let symbol = InlineString::from(sym.symbol.as_str());
             let base = InlineString::from(sym.base_asset.as_str());
-            let quote = InlineSt
+            let quote = InlineString::from(sym.quote_asset.as_str());
+            out.insert(s

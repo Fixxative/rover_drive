@@ -94,4 +94,4 @@ fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
             let symbol = InlineString::from(sym.symbol.as_str());
             let base = InlineString::from(sym.base_asset.as_str());
             let quote = InlineString::from(sym.quote_asset.as_str());
-            out.insert(s
+            out.insert(symbol.clone(),  Info { symbol: symbol, base: base, quote: quote,

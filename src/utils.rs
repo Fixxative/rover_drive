@@ -100,4 +100,7 @@ fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
     Ok(out)
 }
 
-/// Market information subset as retrieved by API GET /a
+/// Market information subset as retrieved by API GET /api/v3/ticker/24hr
+#[derive(Debug)]
+pub struct Market {
+    pub price

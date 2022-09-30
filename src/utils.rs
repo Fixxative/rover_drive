@@ -105,4 +105,7 @@ fn _get_infos() -> Result<HashMap<Symbol, Info>, Box<dyn std::error::Error>> {
 pub struct Market {
     pub price: Decimal64,
     pub volume: Decimal64,
-    pub price_change: D
+    pub price_change: Decimal64,
+}
+
+/// Subset of data returned by api/v3/ticker/24hr, f

@@ -109,4 +109,7 @@ pub struct Market {
 }
 
 /// Subset of data returned by api/v3/ticker/24hr, for deserialisation only
-#[derive(Debug, Clone, Deseria
+#[derive(Debug, Clone, Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct Ticker {
+ 

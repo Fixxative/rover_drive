@@ -114,4 +114,8 @@ pub struct Market {
 struct Ticker {
     symbol: String,
     price_change: String,
-    quote_volume: String
+    quote_volume: String,
+    last_price: String
+}
+
+/// Get all traded binance symbol

@@ -112,4 +112,6 @@ pub struct Market {
 #[derive(Debug, Clone, Deserialize)]
 #[serde(rename_all = "camelCase")]
 struct Ticker {
- 
+    symbol: String,
+    price_change: String,
+    quote_volume: String

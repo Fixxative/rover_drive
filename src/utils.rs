@@ -119,4 +119,5 @@ struct Ticker {
 }
 
 /// Get all traded binance symbols
-pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, B
+pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::Error>> {
+    let mut writer = Vec::wi

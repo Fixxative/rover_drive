@@ -118,4 +118,5 @@ struct Ticker {
     last_price: String
 }
 
-/// Get all traded binance symbol
+/// Get all traded binance symbols
+pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, B

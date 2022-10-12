@@ -120,4 +120,5 @@ struct Ticker {
 
 /// Get all traded binance symbols
 pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::Error>> {
-    let mut writer = Vec::wi
+    let mut writer = Vec::with_capacity(1500000);   // 24hr size is <1MB usually
+    if !request

@@ -126,4 +126,6 @@ pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::
     }
     let cow = String::from_utf8_lossy(&writer);
     let tickers: Vec<Ticker> = serde_json::from_str(cow.deref())?;
-    let mut out = HashMap::<Symbol, Market>::new()
+    let mut out = HashMap::<Symbol, Market>::new();
+    for ticker in tickers.iter() {
+        let symbol = In

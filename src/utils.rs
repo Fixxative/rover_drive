@@ -125,4 +125,4 @@ pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::
         return Err(Box::new(std::io::Error::new(std::io::ErrorKind::Other, "Req api/v3/ticker/24hr failed")));
     }
     let cow = String::from_utf8_lossy(&writer);
-    let
+    let tickers: Vec<Ticker> = serde_json::from_str(cow.deref())

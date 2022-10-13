@@ -122,4 +122,4 @@ struct Ticker {
 pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::Error>> {
     let mut writer = Vec::with_capacity(1500000);   // 24hr size is <1MB usually
     if !request::get("https://api.binance.com/api/v3/ticker/24hr", &mut writer)?.status_code().is_success() {
-        return Err(Box::new(std::io::Error::new(std::io:
+        return Err(Box::new(std::io::Error::new(std::io::ErrorKind::Other, "Req api/v3/ticker/24hr failed")));

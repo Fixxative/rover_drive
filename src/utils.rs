@@ -129,4 +129,6 @@ pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::
     let mut out = HashMap::<Symbol, Market>::new();
     for ticker in tickers.iter() {
         let symbol = InlineString::from(ticker.symbol.as_str());
-        let price_change: Decimal64 = ticker.price_change.parse(
+        let price_change: Decimal64 = ticker.price_change.parse()?;
+        let vol: Decimal64 = ticker.quote_volume.parse()?;
+        l

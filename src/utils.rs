@@ -134,4 +134,10 @@ pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::
         let px: Decimal64 = ticker.last_price.parse()?;
         if vol.is_positive() {
             let mkt = Market { price: px, volume: vol, price_change: price_change };
-            out.insert(symbol,
+            out.insert(symbol, mkt);
+        }
+    }
+    Ok(out)
+}
+
+/// Get all traded binance symbo

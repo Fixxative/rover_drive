@@ -133,4 +133,5 @@ pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::
         let vol: Decimal64 = ticker.quote_volume.parse()?;
         let px: Decimal64 = ticker.last_price.parse()?;
         if vol.is_positive() {
-            let mkt = Market { price: px, volume: vol, 
+            let mkt = Market { price: px, volume: vol, price_change: price_change };
+            out.insert(symbol,

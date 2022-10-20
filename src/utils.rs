@@ -140,4 +140,5 @@ pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::
     Ok(out)
 }
 
-/// Get all traded binance symbo
+/// Get all traded binance symbols sorted by trading volume (in USDT)
+pub async fn get_infos() -> Re

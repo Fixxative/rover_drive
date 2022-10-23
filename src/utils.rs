@@ -141,4 +141,5 @@ pub fn get_markets<'a>() -> Result<HashMap<Symbol, Market>, Box<dyn std::error::
 }
 
 /// Get all traded binance symbols sorted by trading volume (in USDT)
-pub async fn get_infos() -> Re
+pub async fn get_infos() -> Result<Vec<Info>, String> {
+    let infos = _get_infos().map_err(|e| 

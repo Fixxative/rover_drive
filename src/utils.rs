@@ -145,4 +145,5 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
     let infos = _get_infos().map_err(|e| format!("Get infos failed: {:?}", e))?;
     let markets = get_markets().map_err(|e| format!("Get markets failed: {:?}", e))?;
     let mut out = Vec::<Info>::new();
-    for (s
+    for (symbol, mut info) in infos.into_iter() {
+        if let Some(market

@@ -149,4 +149,5 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
         if let Some(market) = markets.get(&symbol) {
             // if the quote ccy is not USDT we try to convert the volume to USDT 
             if info.quote != "USDT" {
-                let mut usdt_sy
+                let mut usdt_sym = info.quote.clone();
+                usdt_sym.push_str("USDT").map_err(|

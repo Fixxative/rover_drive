@@ -151,4 +151,5 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
             if info.quote != "USDT" {
                 let mut usdt_sym = info.quote.clone();
                 usdt_sym.push_str("USDT").map_err(|e| format!("{:?}", e))?;
-                if let Som
+                if let Some(mkt2) = markets.get(&usdt_sym) {
+                    info.vo

@@ -152,4 +152,5 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
                 let mut usdt_sym = info.quote.clone();
                 usdt_sym.push_str("USDT").map_err(|e| format!("{:?}", e))?;
                 if let Some(mkt2) = markets.get(&usdt_sym) {
-                    info.vo
+                    info.volume = market.volume * mkt2.price;
+                    out

@@ -157,4 +157,11 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
                 }
             } else {
                 info.volume = market.volume;
-                o
+                out.push(info);
+            }
+        }
+    }
+    Ok(out)
+}
+
+#[tokio:

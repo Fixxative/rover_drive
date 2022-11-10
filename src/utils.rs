@@ -166,3 +166,6 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
 
 #[tokio::test]
 async fn test_get_infos() -> Result<(), Box<dyn std::error::Error>> {
+    let infos = get_infos().await?;
+    assert!(infos.len()>0);
+    Ok

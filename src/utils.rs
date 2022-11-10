@@ -171,4 +171,5 @@ async fn test_get_infos() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-/// Sort [`Vec`] of [`Info`] by trading volume de
+/// Sort [`Vec`] of [`Info`] by trading volume descending
+pub fn sort_infos(mut infos: Vec<Info>) -> 

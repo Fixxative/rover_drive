@@ -164,4 +164,5 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
     Ok(out)
 }
 
-#[tokio:
+#[tokio::test]
+async fn test_get_infos() -> Result<(), Box<dyn std::error::Error>> {

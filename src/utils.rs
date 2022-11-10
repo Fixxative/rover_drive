@@ -168,4 +168,7 @@ pub async fn get_infos() -> Result<Vec<Info>, String> {
 async fn test_get_infos() -> Result<(), Box<dyn std::error::Error>> {
     let infos = get_infos().await?;
     assert!(infos.len()>0);
-    Ok
+    Ok(())
+}
+
+/// Sort [`Vec`] of [`Info`] by trading volume de

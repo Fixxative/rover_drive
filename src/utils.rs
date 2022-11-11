@@ -173,4 +173,8 @@ async fn test_get_infos() -> Result<(), Box<dyn std::error::Error>> {
 
 /// Sort [`Vec`] of [`Info`] by trading volume descending
 pub fn sort_infos(mut infos: Vec<Info>) -> Vec<Info> {
-    infos.sort_by(|a, b| b.volume.partial_cmp(&a.volume).unwrap_or(std::cmp::Ordering::Equal))
+    infos.sort_by(|a, b| b.volume.partial_cmp(&a.volume).unwrap_or(std::cmp::Ordering::Equal));
+    infos
+}
+ 
+/// Generate a [`Symbol`]->[`Info`] [`Hash

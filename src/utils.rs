@@ -177,4 +177,5 @@ pub fn sort_infos(mut infos: Vec<Info>) -> Vec<Info> {
     infos
 }
  
-/// Generate a [`Symbol`]->[`Info`] [`Hash
+/// Generate a [`Symbol`]->[`Info`] [`HashMap`] from a `Vec<Symbol>`
+pub fn infos_to_lookup(infos: &Vec<Info>) -> Has

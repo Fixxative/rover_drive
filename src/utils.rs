@@ -179,4 +179,7 @@ pub fn sort_infos(mut infos: Vec<Info>) -> Vec<Info> {
  
 /// Generate a [`Symbol`]->[`Info`] [`HashMap`] from a `Vec<Symbol>`
 pub fn infos_to_lookup(infos: &Vec<Info>) -> HashMap<Symbol, Info> {
-    infos.iter().map(|it
+    infos.iter().map(|item| (item.symbol.clone(), item.clone())).into_iter().collect()
+}
+
+/// Ex

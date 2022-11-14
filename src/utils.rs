@@ -182,4 +182,4 @@ pub fn infos_to_lookup(infos: &Vec<Info>) -> HashMap<Symbol, Info> {
     infos.iter().map(|item| (item.symbol.clone(), item.clone())).into_iter().collect()
 }
 
-/// Ex
+/// Extract [`Vec`] of base strings and quote strings from 

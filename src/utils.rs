@@ -182,4 +182,5 @@ pub fn infos_to_lookup(infos: &Vec<Info>) -> HashMap<Symbol, Info> {
     infos.iter().map(|item| (item.symbol.clone(), item.clone())).into_iter().collect()
 }
 
-/// Extract [`Vec`] of base strings and quote strings from 
+/// Extract [`Vec`] of base strings and quote strings from [`Vec`] of [`Info`], sort by volume
+pub fn sort_base_quote(infos: &Vec<Info>) -> 

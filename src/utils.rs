@@ -185,4 +185,5 @@ pub fn infos_to_lookup(infos: &Vec<Info>) -> HashMap<Symbol, Info> {
 /// Extract [`Vec`] of base strings and quote strings from [`Vec`] of [`Info`], sort by volume
 pub fn sort_base_quote(infos: &Vec<Info>) -> (Vec<Symbol>, Vec<Symbol>) {
     let mut bases: HashMap<Symbol, Decimal64> = HashMap::new();
-    let mut quotes: HashMap<Sy
+    let mut quotes: HashMap<Symbol, Decimal64> = HashMap::new();
+    for info i

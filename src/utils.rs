@@ -188,4 +188,6 @@ pub fn sort_base_quote(infos: &Vec<Info>) -> (Vec<Symbol>, Vec<Symbol>) {
     let mut quotes: HashMap<Symbol, Decimal64> = HashMap::new();
     for info in infos.iter() {
         if info.base == "USDT" { continue; }
-        let vol = bases.entry(info.base.clone()).or_insert(De
+        let vol = bases.entry(info.base.clone()).or_insert(Decimal64::from(0));
+        *vol = *vol+info.volume;
+  

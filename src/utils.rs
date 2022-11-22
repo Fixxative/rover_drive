@@ -190,4 +190,4 @@ pub fn sort_base_quote(infos: &Vec<Info>) -> (Vec<Symbol>, Vec<Symbol>) {
         if info.base == "USDT" { continue; }
         let vol = bases.entry(info.base.clone()).or_insert(Decimal64::from(0));
         *vol = *vol+info.volume;
-  
+        let vol = quotes.entry(info.quote.clone()).or_insert(De

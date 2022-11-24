@@ -195,3 +195,4 @@ pub fn sort_base_quote(infos: &Vec<Info>) -> (Vec<Symbol>, Vec<Symbol>) {
     }
     let mut bases: Vec<(Symbol, &Decimal64)> = bases.iter().map(|(k,v)| (k.clone(),v)).collect();
     bases.sort_by(|a,b| b.1.partial_cmp(a.1).unwrap());
+    let bases: Vec<Symbol> = bases.iter().map(|(k,_)| Inl

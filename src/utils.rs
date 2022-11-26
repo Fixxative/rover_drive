@@ -197,4 +197,5 @@ pub fn sort_base_quote(infos: &Vec<Info>) -> (Vec<Symbol>, Vec<Symbol>) {
     bases.sort_by(|a,b| b.1.partial_cmp(a.1).unwrap());
     let bases: Vec<Symbol> = bases.iter().map(|(k,_)| InlineString::from((*k).clone())).collect();
     let mut quotes: Vec<(Symbol, &Decimal64)> = quotes.iter().map(|(k,v)| (k.clone(),v)).collect();
-    quotes.sort_by(|a,b| b.1.partial_cmp
+    quotes.sort_by(|a,b| b.1.partial_cmp(a.1).unwrap());
+    let quotes: Vec<Symbol> = quotes.iter().map

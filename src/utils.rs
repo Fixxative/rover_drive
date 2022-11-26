@@ -199,4 +199,9 @@ pub fn sort_base_quote(infos: &Vec<Info>) -> (Vec<Symbol>, Vec<Symbol>) {
     let mut quotes: Vec<(Symbol, &Decimal64)> = quotes.iter().map(|(k,v)| (k.clone(),v)).collect();
     quotes.sort_by(|a,b| b.1.partial_cmp(a.1).unwrap());
     let quotes: Vec<Symbol> = quotes.iter().map(|(k,_)| InlineString::from((*k).clone())).collect();
-    (bas
+    (bases, quotes)
+}
+
+/// A single ohlcv bar 
+pub struct Bar {
+ 

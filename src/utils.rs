@@ -204,4 +204,6 @@ pub fn sort_base_quote(infos: &Vec<Info>) -> (Vec<Symbol>, Vec<Symbol>) {
 
 /// A single ohlcv bar 
 pub struct Bar {
- 
+    pub t: u64, // open time
+    pub o: f32,
+    pub h: f32,

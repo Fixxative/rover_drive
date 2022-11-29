@@ -212,4 +212,6 @@ pub struct Bar {
     pub v: f32
 }
 
-/// Kline/Candles
+/// Kline/Candlestick chart intervals.
+/// 
+/// See: https://binance-docs.github.io/apidocs

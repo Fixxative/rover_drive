@@ -214,4 +214,6 @@ pub struct Bar {
 
 /// Kline/Candlestick chart intervals.
 /// 
-/// See: https://binance-docs.github.io/apidocs
+/// See: https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-streams
+#[derive(Debug)]
+pub 

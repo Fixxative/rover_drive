@@ -216,4 +216,5 @@ pub struct Bar {
 /// 
 /// See: https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-streams
 #[derive(Debug)]
-pub 
+pub enum Interval {
+    I1m, I3m, I5m, I15m, I30m, I1h, I2

@@ -207,3 +207,9 @@ pub struct Bar {
     pub t: u64, // open time
     pub o: f32,
     pub h: f32,
+    pub l: f32,
+    pub c: f32,
+    pub v: f32
+}
+
+/// Kline/Candles

@@ -220,4 +220,5 @@ pub enum Interval {
     I1m, I3m, I5m, I15m, I30m, I1h, I2h, I4h, I6h, I8h, I12h, I1d, I3d, I1w, I1M
 }
 
-impl std::
+impl std::fmt::Display for Interval {
+    fn fmt(&self, f: &mut std::fmt::Formatte

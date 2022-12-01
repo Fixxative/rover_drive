@@ -225,4 +225,5 @@ impl std::fmt::Display for Interval {
         match self {
             Interval::I1m  => write!(f,  "1m"),
             Interval::I3m  => write!(f,  "3m"),
-            Interval::I5m  
+            Interval::I5m  => write!(f,  "5m"),
+            Interval::I15m => write!(f, 

@@ -234,4 +234,6 @@ impl std::fmt::Display for Interval {
             Interval::I6h  => write!(f,  "6h"),
             Interval::I8h  => write!(f,  "8h"),
             Interval::I12h => write!(f, "12h"),
-            Interval::I1d  => write!(f
+            Interval::I1d  => write!(f,  "1d"),
+            Interval::I3d  => write!(f,  "3d"),
+      

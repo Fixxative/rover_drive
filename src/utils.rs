@@ -242,4 +242,5 @@ impl std::fmt::Display for Interval {
     }
 }
 
-impl Inter
+impl Interval {
+    /// `Interval` length in seconds. Approxi

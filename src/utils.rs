@@ -243,4 +243,5 @@ impl std::fmt::Display for Interval {
 }
 
 impl Interval {
-    /// `Interval` length in seconds. Approxi
+    /// `Interval` length in seconds. Approximate value for 1M.
+    pub fn seconds(self: &Self) ->

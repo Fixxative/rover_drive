@@ -247,4 +247,5 @@ impl Interval {
     pub fn seconds(self: &Self) -> u32 {
         match self {
             Interval::I1m  => 60,
-         
+            Interval::I3m  => 60*3,
+            Interval::I5m  =

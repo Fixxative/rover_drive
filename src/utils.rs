@@ -248,4 +248,6 @@ impl Interval {
         match self {
             Interval::I1m  => 60,
             Interval::I3m  => 60*3,
-            Interval::I5m  =
+            Interval::I5m  => 60*5,
+            Interval::I15m => 60*15,
+            Interval:

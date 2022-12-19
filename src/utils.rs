@@ -253,4 +253,6 @@ impl Interval {
             Interval::I30m => 60*30,
             Interval::I1h  => 60*60,
             Interval::I2h  => 60*60*2,
-            Interval::I4h  => 
+            Interval::I4h  => 60*60*4,
+            Interval::I6h  => 60*60*6,
+            Interval:

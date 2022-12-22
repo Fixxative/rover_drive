@@ -263,4 +263,6 @@ impl Interval {
             Interval::I1M  => 60*60*24*30, // !approx
         }
     }
-    pub fn str(
+    pub fn str(self: &Self) -> &str {
+        match self {
+            Inter

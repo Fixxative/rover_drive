@@ -265,4 +265,6 @@ impl Interval {
     }
     pub fn str(self: &Self) -> &str {
         match self {
-            Inter
+            Interval::I1m  => "1m",
+            Interval::I3m  => "3m",
+          

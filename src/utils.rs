@@ -267,4 +267,5 @@ impl Interval {
         match self {
             Interval::I1m  => "1m",
             Interval::I3m  => "3m",
-          
+            Interval::I5m  => "5m",
+            Interval::I15m => "1

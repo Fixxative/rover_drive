@@ -260,4 +260,7 @@ impl Interval {
             Interval::I1d  => 60*60*24,
             Interval::I3d  => 60*60*24*3,
             Interval::I1w  => 60*60*24*7,
-            Interval::I1M
+            Interval::I1M  => 60*60*24*30, // !approx
+        }
+    }
+    pub fn str(

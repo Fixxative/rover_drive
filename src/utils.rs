@@ -268,4 +268,6 @@ impl Interval {
             Interval::I1m  => "1m",
             Interval::I3m  => "3m",
             Interval::I5m  => "5m",
-            Interval::I15m => "1
+            Interval::I15m => "15m",
+            Interval::I30m => "30m",
+            In

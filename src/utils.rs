@@ -270,4 +270,5 @@ impl Interval {
             Interval::I5m  => "5m",
             Interval::I15m => "15m",
             Interval::I30m => "30m",
-            In
+            Interval::I1h  => "1h",
+            Interval::I2h  =

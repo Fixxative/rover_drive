@@ -271,4 +271,6 @@ impl Interval {
             Interval::I15m => "15m",
             Interval::I30m => "30m",
             Interval::I1h  => "1h",
-            Interval::I2h  =
+            Interval::I2h  => "2h",
+            Interval::I4h  => "4h",
+            Interva

@@ -275,4 +275,6 @@ impl Interval {
             Interval::I4h  => "4h",
             Interval::I6h  => "6h",
             Interval::I8h  => "8h",
-            Interva
+            Interval::I12h => "12h",
+            Interval::I1d  => "1d",
+            Int

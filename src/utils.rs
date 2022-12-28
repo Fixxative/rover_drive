@@ -284,4 +284,4 @@ impl Interval {
     }
 }
 
-/// B
+/// Binance encodes a bar as a vector of various things, her

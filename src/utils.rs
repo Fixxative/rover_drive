@@ -279,4 +279,9 @@ impl Interval {
             Interval::I1d  => "1d",
             Interval::I3d  => "3d",
             Interval::I1w  => "1w",
-  
+            Interval::I1M  => "1M",
+        }
+    }
+}
+
+/// B

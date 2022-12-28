@@ -284,4 +284,6 @@ impl Interval {
     }
 }
 
-/// Binance encodes a bar as a vector of various things, her
+/// Binance encodes a bar as a vector of various things, here are their types
+type BinanceBar = (
+    i64, String, St

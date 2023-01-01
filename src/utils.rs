@@ -291,4 +291,5 @@ type BinanceBar = (
 );
 
 /// helper function for `get_klines`
-fn parse_bar(bbar: &
+fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
+    Ok

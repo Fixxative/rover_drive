@@ -287,4 +287,8 @@ impl Interval {
 /// Binance encodes a bar as a vector of various things, here are their types
 type BinanceBar = (
     i64, String, String, String, String, String,
-    i64, String, i64, String, St
+    i64, String, i64, String, String, String
+);
+
+/// helper function for `get_klines`
+fn parse_bar(bbar: &

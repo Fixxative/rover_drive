@@ -292,4 +292,6 @@ type BinanceBar = (
 
 /// helper function for `get_klines`
 fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
-    Ok
+    Ok(Bar{
+        t: bbar.0 as u64, 
+        o: bbar.1.parse()?, 

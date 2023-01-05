@@ -299,4 +299,8 @@ fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
         l: bbar.3.parse()?, 
         c: bbar.4.parse()?, 
         v: bbar.5.parse()?
-    }
+    })
+}
+
+/// Kline/candlestick bars for a symbol.
+///  

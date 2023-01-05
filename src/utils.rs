@@ -295,3 +295,6 @@ fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
     Ok(Bar{
         t: bbar.0 as u64, 
         o: bbar.1.parse()?, 
+        h: bbar.2.parse()?, 
+        l: bbar.3.parse()?, 
+     

@@ -297,4 +297,6 @@ fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
         o: bbar.1.parse()?, 
         h: bbar.2.parse()?, 
         l: bbar.3.parse()?, 
-     
+        c: bbar.4.parse()?, 
+        v: bbar.5.parse()?
+    }

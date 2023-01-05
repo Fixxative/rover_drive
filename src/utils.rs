@@ -304,3 +304,4 @@ fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
 
 /// Kline/candlestick bars for a symbol.
 ///  
+/// See: https://binance-docs.github.io/apidocs/spot/en

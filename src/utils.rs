@@ -305,4 +305,4 @@ fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
 /// Kline/candlestick bars for a symbol.
 ///  
 /// See: https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
-pub async fn get_klines(symbol: &Symbol, 
+pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>, Box<dyn std::error::Er

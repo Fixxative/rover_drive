@@ -306,4 +306,5 @@ fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
 ///  
 /// See: https://binance-docs.github.io/apidocs/spot/en/#kline-candlestick-data
 pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>, Box<dyn std::error::Error>> {
-    let uri = format!("https://api.binance.com/api/v3/klines?symbol={}&interval={}&limit=1000", symbol, i
+    let uri = format!("https://api.binance.com/api/v3/klines?symbol={}&interval={}&limit=1000", symbol, interval);
+    let mut writer = Vec::with_capacity(20000

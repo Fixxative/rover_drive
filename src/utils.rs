@@ -308,4 +308,5 @@ fn parse_bar(bbar: &BinanceBar) -> Result<Bar, Box<dyn std::error::Error>> {
 pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>, Box<dyn std::error::Error>> {
     let uri = format!("https://api.binance.com/api/v3/klines?symbol={}&interval={}&limit=1000", symbol, interval);
     let mut writer = Vec::with_capacity(200000);   // klines size is <100kB usually
-    if !request::get(u
+    if !request::get(uri, &mut writer)?.status_code().is_success() {
+        return Er

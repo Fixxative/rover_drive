@@ -312,4 +312,5 @@ pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>
         return Err(Box::new(std::io::Error::new(std::io::ErrorKind::Other, "Req api/v3/ticker/24hr failed")));
     }
     let cow = String::from_utf8_lossy(&writer);
-    let bars: Vec<BinanceBar> = serde_jso
+    let bars: Vec<BinanceBar> = serde_json::from_str(cow.deref())?;
+    let mut out: Vec<Bar> = Vec::wit

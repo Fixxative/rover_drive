@@ -318,4 +318,7 @@ pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>
         let bar = parse_bar(bbar)?;
         out.push(bar);
     }
-    Ok(o
+    Ok(out)
+}
+
+/// A single update item from the markets websocket stre

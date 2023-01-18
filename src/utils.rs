@@ -321,4 +321,7 @@ pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>
     Ok(out)
 }
 
-/// A single update item from the markets websocket stre
+/// A single update item from the markets websocket stream
+#[derive(Debug, Clone)]
+pub struct Update {
+    pub symbol: 

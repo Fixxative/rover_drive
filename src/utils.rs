@@ -315,4 +315,7 @@ pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>
     let bars: Vec<BinanceBar> = serde_json::from_str(cow.deref())?;
     let mut out: Vec<Bar> = Vec::with_capacity(1000);
     for bbar in bars.iter() {
-        let bar 
+        let bar = parse_bar(bbar)?;
+        out.push(bar);
+    }
+    Ok(o

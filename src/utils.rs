@@ -325,4 +325,5 @@ pub async fn get_klines(symbol: &Symbol, interval: &Interval) -> Result<Vec<Bar>
 #[derive(Debug, Clone)]
 pub struct Update {
     pub symbol: Symbol,    // Exchange symbol
-    pub ts: u64,           // tim
+    pub ts: u64,           // timestamp (millis)
+    pub px: Decimal64,     // price update

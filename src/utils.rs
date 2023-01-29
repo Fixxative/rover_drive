@@ -327,3 +327,7 @@ pub struct Update {
     pub symbol: Symbol,    // Exchange symbol
     pub ts: u64,           // timestamp (millis)
     pub px: Decimal64,     // price update
+    pub px_24h: Decimal64, // price 24h ago
+}
+
+//

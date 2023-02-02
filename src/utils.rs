@@ -330,4 +330,4 @@ pub struct Update {
     pub px_24h: Decimal64, // price 24h ago
 }
 
-//
+/// A single update item from the markets websocket stream FOR DESER PURPOS

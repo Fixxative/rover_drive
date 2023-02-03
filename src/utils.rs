@@ -335,4 +335,7 @@ pub struct Update {
 struct BinanceUpdate {
     #[serde(alias = "E")]
     ts: u64,
-    #[serde(alias = "s")
+    #[serde(alias = "s")]
+    symbol: String,
+    #[serde(alias = "x")]
+    px_24h: String

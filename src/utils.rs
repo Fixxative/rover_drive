@@ -343,4 +343,6 @@ struct BinanceUpdate {
     px: String
 }
 
-/// Parse a ws stream messag
+/// Parse a ws stream message with updates (i.e. `Vec<BinanceUpdate>`)
+///
+/// See: http

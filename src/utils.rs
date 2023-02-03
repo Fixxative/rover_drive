@@ -338,4 +338,9 @@ struct BinanceUpdate {
     #[serde(alias = "s")]
     symbol: String,
     #[serde(alias = "x")]
-    px_24h: String
+    px_24h: String,
+    #[serde(alias = "c")]
+    px: String
+}
+
+/// Parse a ws stream messag

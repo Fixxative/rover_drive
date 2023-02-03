@@ -333,4 +333,6 @@ pub struct Update {
 /// A single update item from the markets websocket stream FOR DESER PURPOSES
 #[derive(Debug, Clone, Deserialize)]
 struct BinanceUpdate {
-   
+    #[serde(alias = "E")]
+    ts: u64,
+    #[serde(alias = "s")

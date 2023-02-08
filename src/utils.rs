@@ -345,4 +345,4 @@ struct BinanceUpdate {
 
 /// Parse a ws stream message with updates (i.e. `Vec<BinanceUpdate>`)
 ///
-/// See: http
+/// See: https://binance-docs.github.io/apidocs/spot/en/#all-market-ticke

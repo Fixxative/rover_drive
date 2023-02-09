@@ -347,4 +347,5 @@ struct BinanceUpdate {
 ///
 /// See: https://binance-docs.github.io/apidocs/spot/en/#all-market-tickers-stream
 pub fn parse_updates<'a>(s: &String, out: &'a mut Vec::<Update>) -> Result<&'a Vec<Update>, Box<dyn std::error::Error>> {
-    let updates: Vec<BinanceUpdate> = serde_js
+    let updates: Vec<BinanceUpdate> = serde_json::from_str(s.as_str())?;
+    for update in updates.iter()

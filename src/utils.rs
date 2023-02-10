@@ -350,4 +350,5 @@ pub fn parse_updates<'a>(s: &String, out: &'a mut Vec::<Update>) -> Result<&'a V
     let updates: Vec<BinanceUpdate> = serde_json::from_str(s.as_str())?;
     for update in updates.iter() {
         let ts = update.ts;
-        let symbol = InlineString:
+        let symbol = InlineString::from(update.symbol.as_str());
+        let px_24h:Decimal64 

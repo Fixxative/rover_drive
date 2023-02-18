@@ -353,4 +353,9 @@ pub fn parse_updates<'a>(s: &String, out: &'a mut Vec::<Update>) -> Result<&'a V
         let symbol = InlineString::from(update.symbol.as_str());
         let px_24h:Decimal64 = parse_dec(&update.px_24h);
         let px:Decimal64 = parse_dec(&update.px);
-        out.push(Update{symbol: symbol, ts: ts 
+        out.push(Update{symbol: symbol, ts: ts as u64, px: px, px_24h: px_24h});
+    }
+    Ok(out)
+}
+
+/// Get

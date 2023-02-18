@@ -358,4 +358,5 @@ pub fn parse_updates<'a>(s: &String, out: &'a mut Vec::<Update>) -> Result<&'a V
     Ok(out)
 }
 
-/// Get
+/// Get system timestamp in microseconds
+pub fn now_timestamp() -> u64 {
